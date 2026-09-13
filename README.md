@@ -8,6 +8,8 @@
 
 ## 演示
 
+[完整界面图集：34 张截图与技术图](docs/SCREENSHOTS.md)
+
 [![教师端数字人界面，点击打开完整演示](docs/images/digital-human-teacher.png)](https://github.com/myheart521/xinqing/releases/download/v1.1.0/xinqing-complete-demo.mp4)
 
 [完整视频，6 分 24 秒，约 52 MB](https://github.com/myheart521/xinqing/releases/download/v1.1.0/xinqing-complete-demo.mp4)。视频先演示教师端，再演示学生端，包含数字人、模型问答、社区、测评、音乐、运动、预约和师生沟通。
@@ -30,17 +32,29 @@
 
 ### 心情记录与心理测评
 
+| 测评作答页面与题目切换 | 测评报表的类型与次数选择 | 个人中心及记录、预约、收藏入口 |
+| :---: | :---: | :---: |
+| [<img src="docs/images/assessment-question.png" width="220" alt="测评作答页面与题目切换">](docs/images/assessment-question.png) | [<img src="docs/images/assessment-report-entry.png" width="220" alt="测评报表的类型与次数选择">](docs/images/assessment-report-entry.png) | [<img src="docs/images/personal-center.png" width="220" alt="个人中心及记录、预约、收藏入口">](docs/images/personal-center.png) |
+
 学生端有心情日记、情绪历史和个人记录页面。测评从题库进入，完成作答后可以查看结果，并在个人中心查看历史记录。演示中的题库包括性格、心理健康和抑郁相关测试；问卷内容、计分方式和结果说明由相应的数据与业务逻辑决定。
 
 测评记录与 AI 对话分别保存。开发时可以沿着 `PsychologicalTestController`、`HistoryTestController` 和学生端的 `test-history`、`test-data-report` 页面查看数据如何传递。公开数据库只有表结构，导入后需要自行准备允许使用的量表和测试数据。
 
 ### 圈子、活动和知识阅读
 
+| 活动广场与活动入口 | 发表动态与 AI 润色入口 | 发起活动、上传图片和选择主题 |
+| :---: | :---: | :---: |
+| [<img src="docs/images/activity-list.png" width="220" alt="活动广场与活动入口">](docs/images/activity-list.png) | [<img src="docs/images/post-composer.png" width="220" alt="发表动态与 AI 润色入口">](docs/images/post-composer.png) | [<img src="docs/images/activity-composer.png" width="220" alt="发起活动、上传图片和选择主题">](docs/images/activity-composer.png) |
+
 圈子里有帖子、评论、点赞和关注，也有活动展示及参与记录。学生可以在个人中心找回自己参与的活动、关注的内容和收藏。相关页面集中在 `mobile/group_pages/`、`mobile/mine_pages/`，后端有博客、圈子、评论和活动等控制器。
 
 心理科普页面支持文章阅读，历史演示还包含摘要和个人笔记。科普文章列表与供模型检索的知识库是两个入口：前者给学生直接阅读，后者为模型回答提供参考。维护内容时需要分别检查文章数据和检索索引。
 
 ### 咨询与预约
+
+| 咨询师列表及预约、交流入口 | 咨询预约的日期与时段选择 |
+| :---: | :---: |
+| [<img src="docs/images/counselor-directory.png" width="220" alt="咨询师列表及预约、交流入口">](docs/images/counselor-directory.png) | [<img src="docs/images/appointment-form.png" width="220" alt="咨询预约的日期与时段选择">](docs/images/appointment-form.png) |
 
 咨询中心展示老师信息，学生选择老师后可以查看可预约日期和时段，填写预约信息，也可以通过消息页面与老师沟通。教师端有对应的预约处理和聊天页面。
 
@@ -127,7 +141,7 @@ xinqing/
 
 后端控制器的完整目录是 `backend/xinqing-service/src/main/java/com/hpu/xinqing/controller/`。教师端从 `admin/src/router/` 和 `admin/src/views/` 看起；学生端先看 `mobile/pages.json`，页面注册、主包和分包都在这里。HarmonyOS 的页面和网络工具位于 `harmony/entry/src/main/ets/`。
 
-参赛 PPT 中的原始架构图和流程图也保留在[材料图集](docs/MEDIA.md)。图中记录的是当时的设计，部署依赖以源码和配置文件为准。
+架构图和流程图保留在[完整图集](docs/SCREENSHOTS.md)。图中记录的是当时的设计，部署依赖以源码和配置文件为准。
 
 ## 模型和数据
 
@@ -294,6 +308,6 @@ pnpm run dev
 
 ## 资料和许可证
 
-用户手册、研究报告和 PPT 中的功能说明已整理进 README 与 `docs/`，界面图和原始技术图见[材料图集](docs/MEDIA.md)。原始申报表、合作协议、私人聊天、学生测评记录、咨询数据和部署凭据没有放入仓库。历史知识文档中含转载与具名经历，`rag/` 保留处理代码和知识组织说明，原文及其向量不随包分发。
+用户手册、研究报告和 PPT 中的功能说明已整理进 README 与 `docs/`，界面图和技术图见[完整图集](docs/SCREENSHOTS.md)。原始申报表、合作协议、私人聊天、学生测评记录、咨询数据和部署凭据没有放入仓库。历史知识文档中含转载与具名经历，`rag/` 保留处理代码和知识组织说明，原文及其向量不随包分发。
 
 项目自有代码使用 [MIT](LICENSE)，各子目录保留的第三方许可证继续适用。Qwen 适配器采用 [Qwen RESEARCH 许可](licenses/LICENSE-QWEN)，商业使用需按上游条款另行申请；RBT3 分类模型使用 [Apache-2.0](licenses/LICENSE-RBT3-APACHE-2.0)，合成数据使用 [CC BY 4.0](LICENSE-DATA)。文多多 SDK 的 GPL-3.0、数字人 SDK 的取得方式及素材说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
