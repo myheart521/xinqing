@@ -13,7 +13,7 @@
 | 解压文件 SHA-256 | `34636fac3d2240ddd5fca8494cc1831fc44dc2212d36fbf7621eaed47b2d322c` |
 | 构建方式 | 静态通用场景模板组合；seed=20260511；无外部数据、网络调用或模型生成 |
 | 验证环境 | Python 3.12.7；生成结果与历史独立新增子集逐字节相同 |
-| 划分 | 仅提供历史训练子集，不提供未经审查的旧版 dev/test |
+| 划分 | 仅提供历史训练子集，不包含旧版 dev/test |
 
 ```bash
 python scripts/generate_synthetic_dataset.py --output train.synthetic.jsonl
@@ -45,12 +45,16 @@ python scripts/generate_synthetic_dataset.py --output train.synthetic.jsonl
 
 | 历史来源 | 已知情况 | 本次处理 |
 | --- | --- | --- |
-| 旧版自建 3,100 条 | 含私人聊天参考的合成改写记录；缺少完整同意及不可追溯性审查证据 | 不发布 |
+| 旧版自建 3,100 条 | 其中 300 条派生样本已全部核对，文本精确匹配静态通用模板；实际生成函数只接收类别、不接收原始聊天文字 | 当前数据附件仍限定为可独立复现的 114,900 条新增子集；模型权重已在 v1.1.0 发布 |
 | CPsyCounD 20,552 条转换样本 | 上游卡标注 CC-BY-SA-4.0；需遵守署名、共享方式和相关数据要求 | 不重新分发，提供上游链接 |
 | SMILE 59,749 条转换样本 | 仓库 LICENSE 为 CC0；介绍称由真实心理互助 QA 经模型扩展 | 未仅因 CC0 就断言不存在隐私风险；不重新分发 |
 | Psy-Insight 1,699 条转换样本 | 上游说明涵盖多个原始来源和不同条款，含付费语料、抓取内容和书籍材料 | 尚未逐项核实再分发权利；不重新分发 |
 
 上游资料：[CPsyCounD](https://huggingface.co/datasets/CAS-SIAT-XinHai/CPsyCoun)、[SMILE](https://github.com/qiuhuachuan/SMILE)、[Psy-Insight 来源说明](https://github.com/ckqqqq/Psy-Insight/blob/main/docs/data_source/data_source.md)。公开可下载不等于可以把不同来源统一改为仓库代码许可证。
+
+## 与模型发布的关系
+
+本数据附件的范围与模型训练集不同。v1.1.0 同时提供实际 Qwen V2 适配器和 RBT3 分类器，详见 [MODEL_CARD.md](MODEL_CARD.md)。300 条旧版派生记录的逐条模板核对没有发现原始私人叙事、姓名或联系方式；原始聊天、处理明细与第三方咨询语料均未随权重包发布。静态来源核查不等于差分隐私或模型提取测试。
 
 ## 许可
 

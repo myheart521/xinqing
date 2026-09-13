@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件下载示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .file-types {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <h1>文件下载示例</h1>
+    <p>在下方输入文本内容，选择文件类型，点击生成按钮即可下载文件。</p>
+    
+    <textarea id="content" placeholder="在此输入内容..."># 标题
+
+这是一个测试文档。
+
+## 二级标题
+
+- 项目1
+- 项目2
+- 项目3
+
+### 表格示例
+
+| 姓名 | 年龄 | 职业 |
+|------|------|------|
+| 张三 | 25 | 工程师 |
+| 李四 | 30 | 设计师 |
+| 王五 | 28 | 产品经理 |
+</textarea>
+    
+    <div class="file-types">
+        <button onclick="generateFile('TXT')">生成文本文件</button>
+        <button onclick="generateFile('MD')">生成Markdown</button>
+        <button onclick="generateFile('EXCEL')">生成Excel</button>
+        <button onclick="generateFile('WORD')">生成Word</button>
+    </div>
+    
+    <button id="connect-btn" onclick="connect()">连接服务器</button>
+    <button id="disconnect-btn" onclick="disconnect()" style="background-color: #dc3545;">断开连接</button>
+    
+    <div id="status" class="info">请先连接服务器</div>
+    
+    <script src="/js/file-downloader.js"></script>
+    <script>
+        // 用户ID
+        const userId = 24; // 可以根据实际情况修改
+        let downloader = null;
+        
+        // 设置状态
+        function setStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = type;
+            statusDiv.textContent = message;
+        }
+        
+        // 连接服务器
+        async function connect() {
+            try {
+                downloader = new FileDownloader(userId);
+                
+                // 设置回调
+                downloader.onConnect = () => {
+                    setStatus('连接成功', 'success');
+                };
+                
+                downloader.onFileReady = (fileInfo) => {
+                    setStatus(`文件 ${fileInfo.fileName} 准备就绪，即将下载...`, 'success');
+                };
+                
+                downloader.onError = (error) => {
+                    setStatus(`错误: ${error}`, 'error');
+                };
+                
+                // 连接
+                await downloader.connect();
+            } catch (error) {
+                setStatus(`连接失败: ${error}`, 'error');
+            }
+        }
+        
+        // 断开连接
+        function disconnect() {
+            if (downloader) {
+                downloader.disconnect();
+                downloader = null;
+                setStatus('已断开连接', 'info');
+            }
+        }
+        
+        // 生成文件
+        async function generateFile(fileType) {
+            if (!downloader || !downloader.connected) {
+                setStatus('请先连接服务器', 'error');
+                return;
+            }
+            
+            const content = document.getElementById('content').value;
+            if (!content) {
+                setStatus('请输入内容', 'error');
+                return;
+            }
+            
+            try {
+                setStatus(`正在生成${fileType}文件...`, 'info');
+                await downloader.generateFile(content, fileType);
+            } catch (error) {
+                setStatus(`生成文件失败: ${error}`, 'error');
+            }
+        }
+        
+        // 页面关闭时断开连接
+        window.addEventListener('beforeunload', () => {
+            if (downloader) {
+                downloader.disconnect();
+            }
+        });
+    </script>
+</body>
+</html> 

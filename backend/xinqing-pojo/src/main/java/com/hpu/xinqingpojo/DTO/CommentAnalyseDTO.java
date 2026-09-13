@@ -1,18 +1,19 @@
 package com.hpu.xinqingpojo.DTO;
 
 import dev.langchain4j.model.output.structured.Description;
+import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Description("学生发布的评论")
+@Data
+@Description("student comment analysis")
 public class CommentAnalyseDTO {
-    @Description("评论id")
+    @Description("comment id")
     private Long id;
 
-    @Description("评论内容")
+    @Description("comment content")
     private String content;
 
-    @Description("评论时间")
+    @Description("comment create time")
     private LocalDateTime createTime;
 }

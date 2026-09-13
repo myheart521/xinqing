@@ -1,27 +1,39 @@
 # 学生端与 HarmonyOS 配置
 
-本发布包含 uni-app 学生端的 108 个 Vue 文件及其服务、状态管理和页面代码，以及 HarmonyOS 客户端的 186 个 ArkTS 文件。完整页面清单与源码一起保留。
-
 ## uni-app 学生端
 
-1. 在 `mobile` 目录执行 `npm ci --legacy-peer-deps`，再使用支持 Vue 3 的 HBuilderX 打开该目录。该工程采用 HBuilderX 工程布局，尚未提供经验证的独立 CLI 构建命令。
-2. 在 `mobile/utils/URL.js` 配置自己的后端地址。发布默认值为本机 `http://localhost:8080`；手机或模拟器访问宿主机时需改为自己的开发网络地址，并在后端配置相应 CORS。
-3. 使用微信小程序或 App 打包时，在 HBuilderX 中填写自己的应用标识和签名配置。地图功能需要自己的授权客户端 Key；入口为 `mobile/common/TengXunMapConstant.js`，原有 Key 已移除。
-4. `mobile/utils/ossUrl.js` 和部分页面使用 `assets.example.invalid` 作为历史远程素材的占位域名。接入自己有权使用的素材服务后替换这些地址。
+学生端保留完整参赛工程的页面、service、stores、utils 和静态目录，并合入后续开发版本的功能页面。恢复了预约、数字人形象配置和虚拟展厅页面及其路由；原始提示词资源保留在 `mobile/system_prompt.md`，其中机构和团队身份已经泛化。
 
-缺失的 `uni_modules/tuniaoui-vue3` 引用已改用 package.json 中声明的 `@tuniao/tnui-vue3-uniapp` npm 包；全局样式来自 `@tuniao/tn-style` 与 `@tuniao/tn-icon`。依赖由 npm 安装，发布不附带 node_modules。
+1. 在 `mobile` 中使用现有锁文件安装依赖，再用支持 Vue 3 的 HBuilderX 打开。该目录是 HBuilderX 工程，未声称已经完成独立 CLI 整包构建。
+2. 在 `mobile/utils/URL.js` 设置自己的后端 HTTP/WebSocket 地址。真机中的 localhost 指手机本身，应替换为自己开发环境可达的服务地址。
+3. 在 HBuilderX 中填写自己的应用标识、平台签名和域名白名单。腾讯地图的客户端授权 key 位于 `mobile/common/TengXunMapConstant.js`，应按自己应用的权限和域名限制配置；不要放模型或对象存储的服务端 secret。
+4. 远程素材地址位于 `mobile/utils/ossUrl.js` 和相应页面。历史私人 OSS 对象不随代码恢复，应配置自己的公开素材服务；原本已经放在代码中的通用图片已原样恢复。
+
+### 数字人和展厅地址
+
+`mobile/utils/integrations.js` 集中提供公开的网页集成地址，可在应用打开相应页面前设置：
+
+```js
+uni.setStorageSync('xinqingPublicIntegrations', {
+  digitalHumanUrl: 'https://your-host.example/configuration',
+  galleryUrl: 'https://your-gallery.example/'
+})
+```
+
+这里填写自己部署的网页地址，不是 API secret。数字人开发默认地址为 `http://127.0.0.1:5174/configuration`；真机使用前需改成可达地址。自建虚拟展厅地址默认空，未配置时页面明确提示。网页的 HTTPS、CORS、iframe/webview 允许来源和平台业务域名需对应配置。
+
+UI 使用 `@tuniao/tnui-vue3-uniapp`、`@tuniao/tn-style` 与 `@tuniao/tn-icon` 等已声明依赖；不需要把 node_modules 提交到仓库。原 mobile iconfont.ttf 已恢复，避免图标被通用字体替换后失真。
 
 ## HarmonyOS
 
-1. 用兼容 HarmonyOS 5.0.0 / API 12 的 DevEco Studio 打开 `harmony`，由 IDE 同步 ohpm 依赖。
-2. 在 `harmony/entry/src/main/ets/utils/http.ts` 配置自己的后端地址；其他直接网络调用可搜索 `localhost` 与 `example.invalid`，按实际服务替换。
-3. 在 DevEco Studio 为自己的设备配置应用签名。公开工程不含签名证书、私钥、profile、个人 SDK 路径或自动签名凭据。
-4. 咨询中心和人员模型中的静态资料为示例，正式资料应来自已授权后端。
+使用支持项目声明的 HarmonyOS SDK/API 版本的 DevEco Studio 打开 `harmony`，由 IDE 同步 ohpm 依赖。后端入口位于 `harmony/entry/src/main/ets/utils/http.ts`；其他直接网络调用请按实际部署调整 localhost 和示例域名。签名、profile、个人 SDK 路径及生产证书不会随仓库提供。
 
-## 资源与验证范围
+原 ArkTS 页面和上游 Huawei Apache-2.0 版权头保留。咨询资料中的示例记录仍应由自己的授权后端替换。
 
-原始图片、头像、图标、动画、音乐、歌词和视频没有随本次源码发布。对应文件改为新生成的中性图片、占位图标字体、一秒静音音频、纯色视频或简单歌词占位，以保留资源引用。原始内容保留在维护者的私人原件中；界面因此与历史截图不同。需要外部素材的地址仍需配置。
+## 资源恢复与验证边界
 
-发布前检查包括：JSON / JSON5 可解析性、页面清单对应文件、相对源码导入、HarmonyOS `$rawfile` 资源引用、Vue SFC 与 JS/TS 语法，以及密钥扫描。WXS 单独脚本按 uni-app 扩展处理。尚未在 HBuilderX 或 DevEco Studio 中完成整包编译、真机调试或端到端业务验证；这些静态检查不能替代平台构建。
+本次对 223 个原始通用图片/SVG/小游戏贴图进行了逐项资源审查并原样恢复；另外恢复了原移动端图标字体和四个彩色圆点的加载动画。包括角色插画、按钮图标、游戏贴图、音乐封面插画以及通用人格类型参考图，没有恢复真实身份照片、证书或用户上传记录。素材来源范围见 `mobile/ASSET_NOTICES.md` 与 `harmony/ASSET_NOTICES.md`。
 
-第三方组件仍适用各自许可证，包括图鸟 UI、mp-html、Prism、Vue 和带 Huawei Apache-2.0 版权头的 HarmonyOS 示例衍生代码。腾讯地图 SDK 的使用还需遵守上游 SDK 条款。仓库主许可证不替代这些条款；保留源码中的上游版权声明。
+具名第三方音乐的整曲与歌词没有作为 MIT 资源重新发布；相应播放器和资源引用保留示例音源，部署者可用获得授权的音乐替换。远程私人 OSS 素材仍不在公开包内。
+
+静态语法、页面引用和资源存在性检查不能替代 HBuilderX/DevEco 整包编译和真机测试。本次实际执行的构建与测试结果见 [VALIDATION.md](VALIDATION.md)。

@@ -1,0 +1,156 @@
+{
+  "release": "v1.1.0",
+  "assets": [
+    {
+      "filename": "xinqing-qwen-v2-lora.tar.gz",
+      "bytes": 223938198,
+      "sha256": "585332d7927ca01fa795e110321df0b4e8c617201525f7b37fb1c66791714377",
+      "url": "https://github.com/myheart521/xinqing/releases/download/v1.1.0/xinqing-qwen-v2-lora.tar.gz",
+      "license": "Qwen-Research-2024-09-19",
+      "members": [
+        {
+          "path": "xinqing-qwen-v2-lora/adapter_config.json",
+          "bytes": 1152,
+          "sha256": "3849fe21021f35294ba1baf6354ae795bc72a0996c6398dd027e483e9a540830"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/adapter_model.safetensors",
+          "bytes": 239536272,
+          "sha256": "3c5981ef4b98f7003c62f4d220c35448f9d9eae8773d33964bf18ef9b2ec9731"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/chat_template.jinja",
+          "bytes": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/infer.py",
+          "bytes": 1731,
+          "sha256": "c4f46891269f0937b8865a42f0fb091a44a1073f75a6a1266dafb5cc076901ce"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/LICENSE-QWEN",
+          "bytes": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/MODEL_CARD.md",
+          "bytes": 5077,
+          "sha256": "20d318a40d02d94b6e99218a53062bea2455cf5ae515c5927c05ffff811ff8db"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/NOTICE",
+          "bytes": 340,
+          "sha256": "f40310b48fe29ab99c09ee036fb88d8b1617e1e6d6906eddf4d7b5307060c161"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/README.md",
+          "bytes": 417,
+          "sha256": "f150fa57269ae74ea9be5343d843e862f6f06cf2e27d44e769bd7838c004cf18"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/requirements.txt",
+          "bytes": 264,
+          "sha256": "977192a35e9238ed2af96355eac096902bdcd21f3ab39be43c4d670195fa97d3"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/tokenizer.json",
+          "bytes": 11421892,
+          "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/tokenizer_config.json",
+          "bytes": 693,
+          "sha256": "2e3bd3cb5055f7a903a54e7062b2fd14d21b70f4174c3ffcd9fc81ec50a25631"
+        },
+        {
+          "path": "xinqing-qwen-v2-lora/train.py",
+          "bytes": 6475,
+          "sha256": "25f445cf2d17de3172d2f43c88426b4aa64c2a0fee3a71fccb6e84032045e27c"
+        }
+      ]
+    },
+    {
+      "filename": "xinqing-rbt3-emotion-risk.tar.gz",
+      "bytes": 143088886,
+      "sha256": "54247e8eec17f6d0ffb50d40af56e99ab5cce571b645392eb11e8b8879757c79",
+      "url": "https://github.com/myheart521/xinqing/releases/download/v1.1.0/xinqing-rbt3-emotion-risk.tar.gz",
+      "license": "Apache-2.0",
+      "members": [
+        {
+          "path": "xinqing-rbt3-emotion-risk/config.json",
+          "bytes": 861,
+          "sha256": "9bbd73eca216715483cfbe56184af7117e76d429398828bfeeb7a8e2d8c09c4b"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/infer.py",
+          "bytes": 2766,
+          "sha256": "550f48edfc47f21b312655df95b1c60f9b8691d578cda0f9c9a000dc997c2bf6"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/LICENSE-APACHE-2.0",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/model.safetensors",
+          "bytes": 153984868,
+          "sha256": "d827c0afd14b6c0bd6a7fc7b8f08e26116468844b7f09ae42dfaea520cd11933"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/MODEL_CARD.md",
+          "bytes": 5077,
+          "sha256": "20d318a40d02d94b6e99218a53062bea2455cf5ae515c5927c05ffff811ff8db"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/model_config.json",
+          "bytes": 935,
+          "sha256": "332debaec6a2609f967adeb9567bf831a2a2399b8895feb81545b5d60cd68f88"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/NOTICE",
+          "bytes": 300,
+          "sha256": "703b68f6c2aa1ed626323fab96f5f2e87a8a91e6aae306c2ed4e8ac2710870a7"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/README.md",
+          "bytes": 476,
+          "sha256": "39c08409dbdebc48aeed8fd2c2283aeaa24ac7e11aa4d0cbcc42f2e66622747e"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/requirements.txt",
+          "bytes": 264,
+          "sha256": "977192a35e9238ed2af96355eac096902bdcd21f3ab39be43c4d670195fa97d3"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/tokenizer.json",
+          "bytes": 439124,
+          "sha256": "7dfbf1966ebf99d471c3796e9b457329d2b2182b817e144f1e904b957745c839"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/tokenizer_config.json",
+          "bytes": 378,
+          "sha256": "3060793210b66fb490d6f326eb6eb566e32391000a5dd358935593ad7e6f8bd7"
+        },
+        {
+          "path": "xinqing-rbt3-emotion-risk/train.py",
+          "bytes": 9215,
+          "sha256": "7fb90b765a346e4de54db53ab016baba6cb5be1fec5694aa3ef71bd0fccc04e0"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "derived_template_records_reviewed": 300,
+    "all_300_conversations_match_static_templates": true,
+    "qwen_actual_generation_passed": true,
+    "rbt3_actual_cpu_forward_passed": true,
+    "rbt3_original_to_safetensors_exact_tensor_equality": true,
+    "model_extraction_or_membership_inference_benchmark_performed": false,
+    "runtime": {
+      "torch": "2.6.0+cu124",
+      "transformers": "5.8.0",
+      "peft": "0.19.1"
+    }
+  }
+}

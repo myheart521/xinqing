@@ -84,6 +84,16 @@ xinqing:
       endpoint: ${XINQING_HUAWEI_IOT_ENDPOINT}
       project-id: ${XINQING_HUAWEI_IOT_PROJECT_ID}
       device-id: ${XINQING_HUAWEI_IOT_DEVICE_ID}
+  mental-warning:
+    base-url: ${XINQING_MENTAL_WARNING_BASE_URL:http://127.0.0.1:48084/v1}
+    api-key: ${XINQING_MENTAL_WARNING_API_KEY:}
+    model: ${XINQING_MENTAL_WARNING_MODEL:psych-qwen2.5-3b-lora}
+    temperature: ${XINQING_MENTAL_WARNING_TEMPERATURE:0.2}
+    timeout-seconds: ${XINQING_MENTAL_WARNING_TIMEOUT_SECONDS:120}
+    max-retries: ${XINQING_MENTAL_WARNING_MAX_RETRIES:2}
+    max-tokens: ${XINQING_MENTAL_WARNING_MAX_TOKENS:2048}
+  asr:
+    enabled: ${XINQING_ASR_ENABLED:false}
 search:
   api-key: ${SEARCH_API_KEY}
 langchain4j:

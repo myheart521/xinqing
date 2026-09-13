@@ -1,0 +1,5 @@
+processed_data/
+*.docx
+*.npy
+*.csv
+*.json

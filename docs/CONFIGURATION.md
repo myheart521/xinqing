@@ -2,7 +2,7 @@
 
 ## 环境要求
 
-- 后端：JDK 17、Maven、MySQL 8、Redis；使用消息功能还需要 RabbitMQ。
+- 后端：JDK 17、Maven、MySQL 8；RAG 使用的 Redis 部署必须支持 RediSearch/向量索引（例如 Redis Stack），普通仅键值功能的 Redis 不足以运行向量检索；消息功能还需要 RabbitMQ。
 - 教师端与数字人界面：Node.js 20.19+ 或兼容的 Node.js 22、npm。
 - 学生端：HBuilderX/UniApp 与对应平台 SDK；鸿蒙端需要 DevEco Studio 和项目声明的 HarmonyOS SDK。
 - AI、对象存储、邮件、地图、语音和数字人使用自己的服务与授权，公开包不提供共享账号。
@@ -106,6 +106,42 @@ npm run pure-build
 
 ## 模型与资源
 
-可以接入自己的兼容模型 API，或按 Ollama 支持的方式部署取得使用权的模型。仓库不提供历史 Qwen 微调权重。不要把公开合成子集误当成原完整训练集，参见模型卡和数据集卡。
+可以接入自己的兼容模型 API，或按 Ollama 支持的方式部署取得使用权的模型。现有模型、下载方式与验证结果见 [MODEL_CARD.md](../MODEL_CARD.md)。不要把公开合成子集误当成原完整训练集，参见模型卡和数据集卡。
 
-历史 OSS 图片和用户资源地址已移除；部分界面使用中性占位素材。部署时请使用你有权使用的图片、音视频和文件存储。原始生产快照、密钥与模型缓存没有放入仓库或 Git 历史。
+历史私人 OSS 地址已移除；原工程中可公开的 223 个通用图标、插画与游戏贴图，以及图标字体、加载动画已恢复。具名第三方歌曲仍使用示例音源，详见客户端资源说明。部署时请使用你有权使用的图片、音视频和文件存储。原始生产快照、密钥与模型缓存没有放入仓库或 Git 历史。
+
+
+## 本次恢复的模型与语音配置
+
+后端采用本地最新的 2026 年 5 月源码版本。新增恢复了 WebSocket 握手鉴权、工具意图解析、AI 内部消息过滤、心理预警分级逻辑与对应隔离测试。基础模型和微调模型之间的部署关系参见 [模型卡](../MODEL_CARD.md)。
+
+| 环境变量 | 用途与默认值 |
+| --- | --- |
+| `XINQING_MENTAL_WARNING_BASE_URL` | 兼容 OpenAI 的心理预警模型服务，默认 `http://127.0.0.1:48084/v1` |
+| `XINQING_MENTAL_WARNING_API_KEY` | 上述服务的认证值，仅由后端读取 |
+| `XINQING_MENTAL_WARNING_MODEL` | 该服务实际提供的模型名，默认 `psych-qwen2.5-3b-lora` |
+| `XINQING_MENTAL_WARNING_TEMPERATURE` | 默认 `0.2` |
+| `XINQING_MENTAL_WARNING_TIMEOUT_SECONDS` | 默认 `120` |
+| `XINQING_MENTAL_WARNING_MAX_RETRIES` | 默认 `2` |
+| `XINQING_MENTAL_WARNING_MAX_TOKENS` | 默认 `2048` |
+| `XINQING_ASR_ENABLED` | 是否启用讯飞语音签名接口，默认 `false` |
+| `XINQING_ASR_APP_ID` / `XINQING_ASR_API_KEY` / `XINQING_ASR_API_SECRET` | 自己的讯飞语音应用配置，仅放后端进程环境 |
+
+RedisEmbeddingStore 的原始向量维度为 **1024**；部署时需保证 embedding 模型输出维度和现有索引一致。更换模型/维度时，应创建自己的新索引并重新导入允许使用的文档，不要直接复用不匹配的历史向量。
+
+语音录音器和 worker 保留原实现。管理端和数字人页面通过现有登录令牌请求 `POST /ai/asr/session`；接口要求登录、默认关闭，仅签名固定的讯飞 IAT WebSocket 端点，不接受用户提交的目标地址。返回的短时授权地址按供应商协议携带应用凭据标识及签名，**不返回签名 secret**，也不在前端构建环境存放长期 secret。该签名生成过程的单元测试不访问外部服务。
+
+## 数字人和 PPT 前端依赖
+
+管理端与数字人目录的 `.env.example` 新增：
+
+```dotenv
+VITE_AVATAR_SDK_URL=""
+VITE_ASR_SESSION_PATH=/ai/asr/session
+```
+
+数字人 SDK 加载器已恢复为实际动态加载逻辑。请将按供应商条款取得的完整 ESM 分发放在自己的静态资源服务中，例如 `public/vendor/avatar/`，设置 `VITE_AVATAR_SDK_URL=/vendor/avatar/index.js`。入口及相对引用的 chunk 必须一起部署，入口应导出默认构造器、`PlayerEvents` 与 `SDKEvents`。未设置时其他页面仍可使用，数字人初始化会提示需要配置；这里不提供模拟数字人结果。
+
+文多多 PPT 的 iframe SDK 文件已恢复到 `admin/public/docmee-ui-sdk-iframe.min.js`，原页面按需加载它。其原分发附 GPL-3.0，完整许可保留在 `admin/licenses/docmee-GPL-3.0.txt`，不受根 MIT 许可证覆盖。供应商服务 token 继续通过自己的后端和账户获取。
+
+教师端可使用 `npm ci --ignore-scripts` 后运行 `npm run pure-build`；数字人目录恢复了原 `pnpm-lock.yaml`，可使用 `pnpm install --frozen-lockfile --ignore-scripts` 后运行 `pnpm run build-only`。这些是 Vite 生产构建；完整 TypeScript 检查与目标平台真机验证应按需要另行执行。

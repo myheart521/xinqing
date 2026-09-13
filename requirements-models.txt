@@ -1,0 +1,11 @@
+# Inference package versions match the verified model-serving stack.
+torch>=2.6,<3
+transformers==5.8.0
+peft==0.19.1
+safetensors>=0.6,<1
+accelerate>=1.0,<2
+
+# Training entry points additionally use these packages.
+datasets>=3,<5
+numpy>=1.26,<3
+scikit-learn>=1.5,<2

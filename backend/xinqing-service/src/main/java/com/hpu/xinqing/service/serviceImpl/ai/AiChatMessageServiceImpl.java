@@ -34,8 +34,23 @@ import java.util.List;
 @Slf4j
 public class AiChatMessageServiceImpl extends ServiceImpl<AiChatMessageMapper, AiChatMessage> implements IAiChatMessageService {
 
+    private static final String TOOL_EXECUTION_RESULT_TYPE = ChatMessageType.TOOL_EXECUTION_RESULT.name();
+
     @Resource
     private IAiChatMemoryService aiChatMemoryService;
+
+    public static boolean isDisplayableMessageType(String type) {
+        return !TOOL_EXECUTION_RESULT_TYPE.equals(type);
+    }
+
+    public static List<AiChatMessage> filterDisplayableMessages(List<AiChatMessage> messages) {
+        if (messages == null || messages.isEmpty()) {
+            return List.of();
+        }
+        return messages.stream()
+                .filter(message -> message != null && isDisplayableMessageType(message.getType()))
+                .toList();
+    }
 
     @Transactional
     @Override
@@ -53,12 +68,9 @@ public class AiChatMessageServiceImpl extends ServiceImpl<AiChatMessageMapper, A
             AiMessage aiMessage=(AiMessage) chatMessage;
             String text = aiMessage.text();
             aiChatMessage.setContent(text);
-        }else if (name.equals("TOOL_EXECUTION_RESULT")) {
-            ToolExecutionResultMessage toolMessage=(ToolExecutionResultMessage) chatMessage;
-            String text = toolMessage.text();
-            String toolName=toolMessage.toolName();
-            aiChatMessage.setCreator(toolName);
-            aiChatMessage.setContent(text);
+        }else if (name.equals(TOOL_EXECUTION_RESULT_TYPE)) {
+            log.debug("Tool execution result is internal and will not be saved as a display message, memoryId={}", memoryId);
+            return;
         } else {
             log.info("其他信息，不存入数据库");
             return;
@@ -73,12 +85,13 @@ public class AiChatMessageServiceImpl extends ServiceImpl<AiChatMessageMapper, A
 
         Page<AiChatMessage> page = lambdaQuery().eq(AiChatMessage::getMemoryId, memoryId)
                 .eq(AiChatMessage::getDeleted, false)
+                .ne(AiChatMessage::getType, TOOL_EXECUTION_RESULT_TYPE)
                 .lt(AiChatMessage::getCreateTime, startTime)//小于
                 .orderByDesc(AiChatMessage::getCreateTime)//倒序
                 .page(new Page<>(1, SystemConstants.AI_PAGE_SIZE));
         List<AiChatMessage> list =page.getRecords();
         Collections.reverse(list);
-        return list;
+        return filterDisplayableMessages(list);
     }
 
     @Override

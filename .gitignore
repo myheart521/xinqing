@@ -20,9 +20,16 @@ unpackage/
 *.gguf
 *.jsonl
 __pycache__/
+.venv*/
+models/
+*.tar.gz
 
 *.tsbuildinfo
 
-# Generated neutral client resources are required by source manifests.
+# Client video resources referenced by source manifests.
 !mobile/**/*.mp4
 !harmony/**/*.mp4
+
+# This is application source, not a generated build directory.
+!admin/src/views/build/
+!admin/src/views/build/**

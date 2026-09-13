@@ -30,7 +30,6 @@ public class PersistentChatMemoryStore implements ChatMemoryStore {
         String message = stringRedisTemplate.opsForValue().get(memoryId);
         List<ChatMessage> list = ChatMessageDeserializer.messagesFromJson(message);
         return list;
-
     }
 
     @Override

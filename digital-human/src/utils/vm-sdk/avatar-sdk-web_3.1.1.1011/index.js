@@ -1,7 +1,29 @@
-// Replace this boundary with the vendor SDK obtained under its own license.
-// Use server-issued short-lived session authorization; never embed provider keys.
-export const PlayerEvents = new Proxy({}, { get: (_target, key) => String(key) })
-export const SDKEvents = new Proxy({}, { get: (_target, key) => String(key) })
+// Vendor runtime is provided by the deployer under the vendor's own license.
+// Set VITE_AVATAR_SDK_URL to an ESM entry such as /vendor/avatar/index.js.
+export const PlayerEvents = {}
+export const SDKEvents = {}
+let implementation
+let pending
+
+export async function loadConfiguredAvatarSdk() {
+  if (implementation) return true
+  const url = import.meta.env.VITE_AVATAR_SDK_URL
+  if (!url) return false
+  if (!pending) {
+    pending = import(/* @vite-ignore */ url).then((sdk) => {
+      if (typeof sdk.default !== 'function') throw new Error('Avatar SDK has no default constructor')
+      implementation = sdk.default
+      Object.assign(PlayerEvents, sdk.PlayerEvents || {})
+      Object.assign(SDKEvents, sdk.SDKEvents || {})
+      return true
+    }).catch((error) => { pending = undefined; throw error })
+  }
+  return pending
+}
+
 export default class AvatarPlatform {
-  constructor() { throw new Error('Digital-human SDK is not distributed in this source release') }
+  constructor(...args) {
+    if (!implementation) throw new Error('请先配置并加载数字人 SDK：VITE_AVATAR_SDK_URL')
+    return new implementation(...args)
+  }
 }

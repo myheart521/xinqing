@@ -1,5 +1,5 @@
 import {computed, ref} from "vue";
-import CryptoJS from "crypto-js";
+import request from "@/utils/request";
 import RecorderManager from "../../public/asr-sdk/index.esm.js"
 
 //<script setup>
@@ -17,16 +17,19 @@ import RecorderManager from "../../public/asr-sdk/index.esm.js"
 // </template>
 // Provider credentials belong only on your server.
 
-const apiKey = "";
-const apiSecret = "";
-const app_id = "";
+
 
 /**
  * 获取websocket url
  * 该接口需要后端提供，这里为了方便前端处理
  */
-function getWebSocketUrl() {
-    throw new Error('Speech integration requires server-issued short-lived WebSocket authorization');
+async function getWebSocketSession() {
+    const endpoint = import.meta.env.VITE_ASR_SESSION_PATH || '/ai/asr/session';
+    if (!endpoint.startsWith('/') || endpoint.startsWith('//')) throw new Error('ASR session path must be relative');
+    const response = await request.post(endpoint, {});
+    const session = response.data;
+    if (!session || !session.url || !session.appId) throw new Error('Invalid speech authorization response');
+    return session;
 }
 
 /**
@@ -165,9 +168,11 @@ export function useXfAsr() {
     /**
      * 开始录音
      */
-    function startRecording() {
+    async function startRecording() {
         if (recordStatus.value !== "CLOSED") return;
-        const url = getWebSocketUrl();
+        const session = await getWebSocketSession();
+        const url = session.url;
+        const app_id = session.appId;
         if ("WebSocket" in window) {
             iatWS = new WebSocket(url);
         } else if ("MozWebSocket" in window) {

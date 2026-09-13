@@ -1,0 +1,1578 @@
+{
+  "release": "v1.1.0",
+  "scope": "Files initially recovered during source comparison; final revision also contains documented configuration, integration, model and documentation changes. This is not the full repository file list.",
+  "counts": {
+    "recover-May-2026-source": 25,
+    "restore-download-client-example": 8,
+    "restore-reviewed-original-asset": 223,
+    "restore-latest-feature-page": 5
+  },
+  "files": [
+    {
+      "path": "backend/xinqing-pojo/src/main/java/com/hpu/xinqingpojo/DTO/CommentAnalyseDTO.java",
+      "action": "recover-May-2026-source",
+      "bytes": 445,
+      "sha256": "7587d4cdf8b499e5e525f5955b3750a0165245c01575642d239f3d4fa06702b2"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/controller/ai/ChatController.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2332,
+      "sha256": "ac1df3f510bb64114f6ce8332d8ecfbbe7fcc24cf59a15bac21ab0fbfd406525"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/controller/ai/QwenController.java",
+      "action": "recover-May-2026-source",
+      "bytes": 4397,
+      "sha256": "9678e2c9fec50b65734fb85d0e5bf3e39c0a186b82de50ef54a127039e2c23e4"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/Embedding/Init/AssistantInit.java",
+      "action": "recover-May-2026-source",
+      "bytes": 9250,
+      "sha256": "e3873957b7bf0f2f8bf03fff80fb8bfd6e0ad45d4ed3411fdcd184ec054d0f38"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/Embedding/Init/EmbeddingStoreInit.java",
+      "action": "recover-May-2026-source",
+      "bytes": 1311,
+      "sha256": "682c040d2a9ebbe3173101eead1d85b42ea049e308585fd8dad4fb52f6f7e076"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/Embedding/rebuild/PersistentChatMemoryStore.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2316,
+      "sha256": "0bfc83a39dc750a1ac846fdb0954152a3c9bb66c02150cff9c474a84e07ecd8a"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/interceptor/MyHandShakeInterceptor.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2989,
+      "sha256": "65823929abc15d8bd047e0c07b82be8c3da507426fad898da0aba86d1355f818"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/manage/ClaudeManager/service/impl/MentalAnalysisServiceImpl.java",
+      "action": "recover-May-2026-source",
+      "bytes": 8039,
+      "sha256": "87e8551ef5a13584cbf13091dc4b255b067c49aa32f5951452c72b7336be87ee"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/service/ai/AssistantTeacher.java",
+      "action": "recover-May-2026-source",
+      "bytes": 3253,
+      "sha256": "beae48448149f0ba0ee4b3658dbaffd7a5e1ff6967d24eae90f4195328a23b4b"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/service/ai/AssistantWaring.java",
+      "action": "recover-May-2026-source",
+      "bytes": 3005,
+      "sha256": "2910ee66dcdb8a8b755979d0e57da7052f030cc4d4eaebbd32fb599d335ae4ba"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/service/serviceImpl/ai/AiChatMessageServiceImpl.java",
+      "action": "recover-May-2026-source",
+      "bytes": 4942,
+      "sha256": "8b831f1c752355563a98ce3f63bcb6200a75e4d6dc1653356ba49e6729b8227e"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/TimeTask/warning/tempwarning/TempPsychologyWarningTask.java",
+      "action": "recover-May-2026-source",
+      "bytes": 15354,
+      "sha256": "49efb59e9b27e4cee7d6d252b853c37098f7dedd75894390db5f385969bca81e"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/websocket/U2UChat.java",
+      "action": "recover-May-2026-source",
+      "bytes": 3083,
+      "sha256": "176ab83b2c623473c9767cad9e52d069cb68541800bc927a78010f13c664b6ba"
+    },
+    {
+      "path": "backend/xinqing-pojo/src/main/java/com/hpu/xinqingpojo/DTO/PsychologyWarningPredictionDTO.java",
+      "action": "recover-May-2026-source",
+      "bytes": 779,
+      "sha256": "eeddad117a6d0dc734c8c4a2fd8d2d5aaacc3893abb26deed91939c88735c444"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/config/MentalWarningModelConfig.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2970,
+      "sha256": "be9f4ecb7594e6935112eac12354894e86dcb722f22523d9705c3b54d4edaae1"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/controller/ai/StudentToolIntentResolver.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2151,
+      "sha256": "e61d97cc5e28cce1fdbfefe31636ee7bec319c4e1e73e49cb99e9f9c276957b6"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/interceptor/WebSocketHandshakeAuth.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2732,
+      "sha256": "43878518a30042f0400215b22b0325ca1ded4ac9a751699813d02a2a4cfe2b51"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/TimeTask/warning/tempwarning/MentalWarningPolicy.java",
+      "action": "recover-May-2026-source",
+      "bytes": 6422,
+      "sha256": "a6ce3a8133b2ddedc42e221eddae63930d96bc15fb3c3745049b72c445149a47"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/config/MentalWarningModelConfigTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 1125,
+      "sha256": "29ce1d098724f76a41e9f73c7a21e4b8768e1fec9cd87afc0b68c3e301f80b34"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/controller/ai/StudentToolIntentResolverTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2851,
+      "sha256": "9bc05bd1985381177140547654e9159caab49b72e3963f7c083dbfcc4d558bf5"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/interceptor/WebSocketHandshakeAuthTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 2778,
+      "sha256": "454e44168cbbe847a976cf8eb411bc94217e31290d5a041d0e2d63bcf8c2dafc"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/manage/ClaudeManager/service/impl/MentalAnalysisServiceImplTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 747,
+      "sha256": "64524630a3fcbf544ee723a64d1049c83f41b00cd53844fecc8916302e8e0c9e"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/service/serviceImpl/ai/AiChatMessageServiceImplTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 1433,
+      "sha256": "a6f79ab7ee924ca60576de05d3408fc5baae2f8477363747d715c1b49888b16a"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/TimeTask/warning/tempwarning/MentalWarningPolicyTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 4384,
+      "sha256": "76613e57063f62f4fd0fb6a8d0acb2304cd6cd7ca47c6af7d11c236c4c8afd2a"
+    },
+    {
+      "path": "backend/xinqing-service/src/test/java/com/hpu/xinqing/websocket/U2UChatTest.java",
+      "action": "recover-May-2026-source",
+      "bytes": 1864,
+      "sha256": "f61cce5c13fec087b1afba4891c8e76aac7b5192b2f55f83be338b39094df53e"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/utils/sse/front/README.md",
+      "action": "restore-download-client-example",
+      "bytes": 4138,
+      "sha256": "7a3291d4fc8548e8b3ad1b307d3ee2dcc2121365dc62345fedf1be99c37cfab1"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/utils/sse/front/sse-file-downloader.js",
+      "action": "restore-download-client-example",
+      "bytes": 14893,
+      "sha256": "1b25a89e5778d3c50679d7fbb721b0718d72c8ba1eb2d038e113e63d106a12f7"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/java/com/hpu/xinqing/utils/sse/front/SseFileDownloader.vue",
+      "action": "restore-download-client-example",
+      "bytes": 10944,
+      "sha256": "ff86342d3578356b6002ab7460f0c6db98475eb4cbcbc7e25b49b57c61cf90b6"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/resources/static/file-download-demo.html",
+      "action": "restore-download-client-example",
+      "bytes": 5051,
+      "sha256": "a221d80c7471c9d3c2f341bef67a2563bd724368a6112aa260792e453a1f9442"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/resources/static/README-vue-downloader.md",
+      "action": "restore-download-client-example",
+      "bytes": 3367,
+      "sha256": "06c7a1c5d58ecee1c593340a4a083a1d0858f83af642c93574a1d255d580805f"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/resources/static/vue-file-download-example.vue",
+      "action": "restore-download-client-example",
+      "bytes": 5551,
+      "sha256": "4c6b77d83739d06f3921fae994fcc2b05a752a6ab24fa05f8c57714f70628af3"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/resources/static/js/file-downloader.js",
+      "action": "restore-download-client-example",
+      "bytes": 7419,
+      "sha256": "d881fc0ad53b08382b028187dc81663d5dbb3f71851f76073cdf4e68efa1f449"
+    },
+    {
+      "path": "backend/xinqing-service/src/main/resources/static/js/vue-file-downloader.js",
+      "action": "restore-download-client-example",
+      "bytes": 10695,
+      "sha256": "726472fe4ada592b39bbe5e419fbab63ef90dca210e0cf2232322bc0ff90cfec"
+    },
+    {
+      "path": "digital-human\\src\\assets\\logo.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 276,
+      "sha256": "277e0e97813ffd3af7f70f14474967a1f535de3033efaeb3e746e9ece04f8cc9"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\music\\music_public_forward.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1201,
+      "sha256": "aabf87d678cef37dc70937c392a2899f9b75441cee991394817ad33c32232f27"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\music\\music_public_list_cycled.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2655,
+      "sha256": "4be2f87e1d128eaa445ffbbe3a2d3a51c8fc682aa563e4fb56531cdd67053c2d"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\music\\music_public_next.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1101,
+      "sha256": "2cea48792faf2cc65532839103ac55cd7b3a5bd546966925c51c6b4f950383fb"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\music\\music_public_pause.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1284,
+      "sha256": "cf31a78cee3f87b06935d1bf647af8a6c73a2d8d89758e7565405c63c23c8f5b"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\music\\music_public_play.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1194,
+      "sha256": "d73139c45e895cca1f505c4c82900242ace8490cc63f22fa03926a0824f1ff7a"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\chengzhang.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3998,
+      "sha256": "7f3f44a3625b1a47a3c85fc7ed7fb320591daa80f19dd6803aac93c984a94fc3"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\chooseColor.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2452,
+      "sha256": "033fe670ddd83fbba0c8a8b644a5eb1137bd963f41d5246bbe6513cba286cff3"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\chooseColor_act.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2313,
+      "sha256": "4d5b84c41d1181777b5c81b9d333af50c019d0a466191899df584d78ebd42ef5"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\earth.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 18134,
+      "sha256": "92d33953a90e2c50c10fef2fbadb72176e632e1b3f43ddd56834229a714ee9ff"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\fontSize.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1250,
+      "sha256": "5f90e65e92bf0f95611921a7277e7c66b26ccd8fe618f45511685b95fc47e788"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\font_act.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 945,
+      "sha256": "ba20d1425ccc32bc3cf6a19c83a4498213bf53577cf96e48b98a990268350a27"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\lizhi.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 18575,
+      "sha256": "0bb34fbb5bd93028740308652a49fdc03e5eff9587db21232f906821a3f10dd0"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\sikao.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3064,
+      "sha256": "c6db6ff842431ff797f429ddeebba928bd4c8f59a8dc248941a900c1d705deb6"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\yinyue.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4439,
+      "sha256": "e7914aa140cc92eed74a2e191367a8b5f5f01ed3f0b7129e0f516cd3bab9a605"
+    },
+    {
+      "path": "mobile\\function_pages\\static\\swiper-image\\yueliang.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9123,
+      "sha256": "9ecb153132e729f52703e414d9e787545b96e2e035b390fd9389689547ebf41b"
+    },
+    {
+      "path": "mobile\\mine_pages\\static\\login_top2.jpg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 131469,
+      "sha256": "09ac1ff7e6777d934112e86db119cce2520959cd9127ffce6844af345f21f3af"
+    },
+    {
+      "path": "mobile\\mine_pages\\static\\login_top3.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 80733,
+      "sha256": "5827b764c6c5b33189b7c74c708585b06062f2c8acf8e840ae7ffdc78785e23c"
+    },
+    {
+      "path": "mobile\\static\\logo.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12015,
+      "sha256": "c7e7d74e083692e23015a3d743f447dc7cc63d0bf1354e3a07f807bbe2542a3e"
+    },
+    {
+      "path": "mobile\\static\\avatar\\default.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13399,
+      "sha256": "d5df7784f72a2a2de5da52dd3230392d16b2e9b36405cbc338633ba9ad2507e1"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\beasticon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 19320,
+      "sha256": "61a73392ed4fc9a43ce2d09a85bc88dbf94008563029d1c2d7298fec5a56ed4e"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\hu.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4253,
+      "sha256": "cd1e588e7735da5225030b0bcb0843b435c02fb8c9c02aa746c6af1504d9ffc3"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\laohu.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4658,
+      "sha256": "dcd7dbd08a96637a822cf28d08f8c0c5ebb5ade0112fad71af6dd98c1a946bcf"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\long.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5026,
+      "sha256": "886365ce140e26501bf4cc3728eceead2fc8650d301eec7aefe9061e3a13efa0"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\mao.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4604,
+      "sha256": "5eeb9f63c6097b675c2d2880b185b37d0ffe385fba040128197092f3027ee580"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\player-1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3507,
+      "sha256": "ecc66b6d3b783cf85cace7da4c3dbfac3e7202259dd1f4ced624055383eeafea"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\player-2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4352,
+      "sha256": "93657b07e7b3ad1b4c518e2622397e24636bf7e454f17754fbdc6de4f67caaa0"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\player-ai.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1184,
+      "sha256": "d6fa35832ee46e785f717a391f0059782563778e1ee467a6abe6f613b186d499"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\shi.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4612,
+      "sha256": "c2d4c90dcca32e2b892d23737f97b2877040ad1368e074fde0cdc414efda1a5a"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\xiang.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4536,
+      "sha256": "68c937cb094b06342fdf467fb5dede5b7d759999020e52b400f2c41211cef762"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\xiong.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3912,
+      "sha256": "2702fb54e151b7b7893973cc5f1ffbef19c6e82d71ae056d6f21b6b26cae5958"
+    },
+    {
+      "path": "mobile\\static\\games\\beast\\ying.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5844,
+      "sha256": "844aaf72eb7fa30dcaa8c23a558a0f479b581ee03c8a552df80769c808edbbfd"
+    },
+    {
+      "path": "mobile\\static\\games\\bird\\bird-bg.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 41940,
+      "sha256": "997f1991f8d7be46ac31a3bd09fc605c19c9b0f66cc31a73bd496eb7121e1bf8"
+    },
+    {
+      "path": "mobile\\static\\games\\bird\\bird.gif",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1669,
+      "sha256": "c5a72e3bad8f65dac01428f29e7087cd3148bec9cd4a643d94ea78adca8b8f6a"
+    },
+    {
+      "path": "mobile\\static\\games\\bird\\birdicon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 7987,
+      "sha256": "7e64ee4f279d73c145a6536f7a768404c7f8bac622409c3b5b60a031f14b9450"
+    },
+    {
+      "path": "mobile\\static\\games\\bird\\pipe_b.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5238,
+      "sha256": "62ea2879cb100a0c9099ba3cc5900b79cffc147ebd339d3e690fdc2e6957604c"
+    },
+    {
+      "path": "mobile\\static\\games\\bird\\pipe_t.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5461,
+      "sha256": "752b1d28318d63ba0df5ee0180876e113337d3bac803f1238194573a8dda5841"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\5-1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 323,
+      "sha256": "174b3745b355c83a8604cd0fe2e86b2e33670e4c2361801dee8c3d9fa8778f66"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\5-2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 308,
+      "sha256": "3b4bbd82a77ee4faa88902e0bea2605086efe230d2bd43756cab4da0709a3096"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\5-3.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 312,
+      "sha256": "a4264349fe825be3779898f258cb55d1cbfecdf9ca12e0d8264b4158df1026fa"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\5-4.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 332,
+      "sha256": "371ebf4d9b925031abc483d3dbc4665188e4f31dd4f265ba0a978a5fb023d74c"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\6-1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 364,
+      "sha256": "d7fd05f391dbbe100311035d8690a90239686bf4b78c6be8c193faa311005ee2"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\6-2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 301,
+      "sha256": "c996b1c202ee8400fd75705295a2c64796159e3151be4e247d84c5d074569a73"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\6-3.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 376,
+      "sha256": "4900214e60a33472eb8f114eaa131af52de893bb225b0962e7d02e7da7522095"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\6-4.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 349,
+      "sha256": "3acee0655a8665b234e8e578fabd1527a31e8503ce40a8d55b19bc27d92346e4"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\body.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 166,
+      "sha256": "98ea7acb1d9eaa32f243da42b1018edc25087f25d3783ed74b5479e16aeff289"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\food.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1032,
+      "sha256": "f05ac7be50ec2c0ad132cd0ced7343dabdcc9072e8fab4b4f284572dc75b74cf"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\head.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 519,
+      "sha256": "49fab970c045bd916f8f27f06db324e721d52805a897851eccafc036ed03a59f"
+    },
+    {
+      "path": "mobile\\static\\games\\tan-chi-she\\tanchisheicon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13310,
+      "sha256": "73eca866504bb1d82f7f89ad05cdad5f573efba060c9bcf9ab407cf6d0ba216f"
+    },
+    {
+      "path": "mobile\\static\\games\\wu-zi-qi\\black.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 497,
+      "sha256": "315264c432b3f14ea86de5e566fbda8f4f1387c98f3e5e5c6fa0072c2546c55d"
+    },
+    {
+      "path": "mobile\\static\\games\\wu-zi-qi\\white.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 425,
+      "sha256": "73d9b55b3c47781b09f0cd382f14c11728305b5e4657bf6a2216556ec2e08458"
+    },
+    {
+      "path": "mobile\\static\\games\\wu-zi-qi\\wuziicon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 7455,
+      "sha256": "c658183204db2276c8784206092714537044549175f40f3f7a00677e0b5c5d2c"
+    },
+    {
+      "path": "mobile\\static\\images\\analyse.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4538,
+      "sha256": "3788388e32f7e07a9dad17b09ca8e2320a44c7cb4bee3e35dfad4d174bb453f2"
+    },
+    {
+      "path": "mobile\\static\\images\\default.jpg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 24332,
+      "sha256": "5c47f4db5108ff90d252b2001e4f74aec69557c59c63e4af907729635989c45b"
+    },
+    {
+      "path": "mobile\\static\\images\\empty.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12054,
+      "sha256": "629024e9652d5cfc3c6c4d07136e71e1fb67029e9fe2d978dc20126981253704"
+    },
+    {
+      "path": "mobile\\static\\images\\login-top2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 19574,
+      "sha256": "4002dbcdd237209d5a6f45d7db4d3e4e4a5954dbc6a52de08f3005132e803979"
+    },
+    {
+      "path": "mobile\\static\\images\\taikong.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13859,
+      "sha256": "8173d407cb75c9e327b7fd974c1c2332df9b63468bb07892e727ec56174ac7be"
+    },
+    {
+      "path": "mobile\\static\\images\\xiangce.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 6719,
+      "sha256": "c09ff768f0abfb3831b1c4c021ab7d7d742808e58a2da52210bd9a0e8fc7872d"
+    },
+    {
+      "path": "mobile\\static\\images\\youxi.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 18220,
+      "sha256": "803b695d77dd8bb641382b660a01eef442632fae3e4b5ec3759c03055f864647"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\agreement.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 16247,
+      "sha256": "39ffef745b72c32976af0e238865a82f2f82d812b54064683f0446ac9034b32c"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\chart.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8174,
+      "sha256": "155ca13c042e3722ec9511a0df6661401168fe3ec45a4590a223320bfa60cd58"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\collect.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15889,
+      "sha256": "d3ccb3afaedd47595338d1c52cf6077d2b40e77576de7cc0b4dcf184269f9feb"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\forum.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15705,
+      "sha256": "f38ad3040a2272aac109a0ecb4ab40fe63fb3fa5fd0078c93ac17d6e3b38e9e2"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\furture.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10164,
+      "sha256": "02162d7aa154cb28c3710c28a4e75826eb37f6d917955829834123b4628ba09b"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\history.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 14075,
+      "sha256": "204fba9a4985de219218d9741069eb966206bcd82acb417b999b710c2ab60872"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\information.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5798,
+      "sha256": "95f41a7661fde42ae09d32e9c19958b107f6e220b567a071f5290ac1cc37135d"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\interest.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11515,
+      "sha256": "d3f4101ad402935f86ef26e6b4dfbbe820929c6f12b29acc5dae0060c02fc8c8"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\motion-history.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11926,
+      "sha256": "afad9fd0213df209c26212a6cb784ff491c87a86b5dd4e2a6364cf097f36b3ce"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\personal-data.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9686,
+      "sha256": "84ddd3fa8e1cfc58f2eaff803b78e444eb20b8f607c3df5e30ac4f191b93ea5b"
+    },
+    {
+      "path": "mobile\\static\\mine-image\\setting.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9698,
+      "sha256": "694234b4ec642c8252b2f3686d89a9f9aafa00d9f09ce737dcc0cffaaf0ddd53"
+    },
+    {
+      "path": "mobile\\static\\search\\delete.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1347,
+      "sha256": "badf616833a3c73ef8d062b6ecc233b551daa931dd9bc268eb1434002b792b12"
+    },
+    {
+      "path": "mobile\\static\\search\\nosee.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1535,
+      "sha256": "033dfd1eff18e5938263335b82d9473103c228c3ed51eb4d0351a63b2ed1f647"
+    },
+    {
+      "path": "mobile\\static\\search\\search.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1088,
+      "sha256": "cd2a1f6f56e659c01596320410104bc361db2f428c135c6e617e6ba0fef2d883"
+    },
+    {
+      "path": "mobile\\static\\search\\see.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2025,
+      "sha256": "0e952ffb93055ed4a623b56ea7cb39b21221dbc4fbd33683bb98525a862d364e"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\faxian.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15816,
+      "sha256": "2dba8a29ffa74c024be5dfbd2bd2d77967e397c141dbb1d6d2376c8b196ebd73"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar0-cur.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3565,
+      "sha256": "b0f448dfd22829309022b643ac6198291ee8a0804a3c23156b206191c0e41c46"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar0-curnew.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8913,
+      "sha256": "dbc227a32c29f14f9e1762b501b1ddee383ff8b1c09da358098871d07bb18a20"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar0.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3815,
+      "sha256": "486650b6e961ffb4cfc2469fd0d4a6fa8a292ccb3d1b4b99f582ce2b82ea3dcf"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar1-cur.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4158,
+      "sha256": "055909e7006e5e9cf08ff6effce78a828b5b428b768e20fbb4b6262d37987e67"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar1-curnew.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12825,
+      "sha256": "2da14e27134e483c7af060c67fa803ed8c8a1185d0da3835c9f26f7cdc6297ee"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4439,
+      "sha256": "8e19a4b5bc8fa704a5d1b6991c99b927c9291ad601a2cf79a49aea98d44d5bd8"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar2-cur.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3489,
+      "sha256": "5357ecbdf27c89a06df12a61b19e67a17fa19e98eb2e16e24b62f3bd8403d5cf"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar2-curnew.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8867,
+      "sha256": "89b91c76d88ecb0fae9572a1dd5c78cde9375778fe807f5c641846b292553c69"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3670,
+      "sha256": "2f39364b6161648299ce8eed5dd39e28bbae406407aa33797bc0fa84ccb1d283"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar3-cur.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4077,
+      "sha256": "76ce91966af0e5ed5ed38ce6ae6864db3add28698cb08cae397421916969ce65"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar3-curnew.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11586,
+      "sha256": "6d325b806169bd22149a2b99a0bc6dda50373b83a30fff62b849f234b9e16f7e"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\tn-tabbar3.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4507,
+      "sha256": "30731352fcfe8198aed98fdeccf573bacd537a32ad23a35cad33b6c21b0c8a50"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\wave-1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4147,
+      "sha256": "71ae9dde5ad58f06ed149db2f1828d43542469848356741d42d5ad7fa539b262"
+    },
+    {
+      "path": "mobile\\static\\tabbar\\wave-2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5203,
+      "sha256": "0d720a6ff9cf12c5c700b5153017e12aa326ab80a5600f6cbf311656efecf8ef"
+    },
+    {
+      "path": "harmony\\AppScope\\resources\\base\\media\\app_icon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2777,
+      "sha256": "79c27214e49332c1e5bcbbe9badeac547c13ee38f597658de313b907fdf2a4e6"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\account.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8393,
+      "sha256": "f6a69fc7c194e2b82ae6b04b84c2788baa0027dca5c46a4748ac586aa0f5e824"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\add.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 7585,
+      "sha256": "3f2b9b8cebf65bf18e8146e85841e1cfb6fe39b90ff2e76550d45a868e240674"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\arrow_down.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1036,
+      "sha256": "6be6f729e2d48c1121f7cc80b218d566b922552976484a63dc3ed8a2cab72006"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\back.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1473,
+      "sha256": "5a7db13a8e510bda61218a684554acb2523dab149914a7d766f9d9b9c9fa0815"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\background.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 57364,
+      "sha256": "3cf4698f029a4a8aaa5fc6a523399df68149ec07a392167ccd089fe3f11e3c67"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\blank.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 14205,
+      "sha256": "03c197479e811b70c649d27d6ca49a2ca2cd6d67a92b5f8d00076c701bffbe8f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\change.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1365,
+      "sha256": "d3043c2cffee4a1240094329bf2bb074ef2b4bc00fc2b225c64fb9cc9147e2cc"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\changeBack.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1413,
+      "sha256": "192ca6fe63ce642bfa3582b9259cd23a9d95cfe56a2d652ded57f0521a0e5594"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\confirm.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9371,
+      "sha256": "820d27456e3bf30474b6d0915ce27203d64a4dca0d5441c5684f6197d685cfd6"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\foreground.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12430,
+      "sha256": "8f9794085cab5bf23644e339ec2b48eb5091d18b6a7742f7fcd87e5ae37794c5"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\functionTitleStar.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13037,
+      "sha256": "f906ed4a034d9deb4307933359049f50904303827196d558587ad5dfbce71402"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\load.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 16132,
+      "sha256": "b119a7abb638d222586593e9eba11bd3bfd5a85cae50434d8fb1268cd98ab436"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\logo.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12015,
+      "sha256": "c7e7d74e083692e23015a3d743f447dc7cc63d0bf1354e3a07f807bbe2542a3e"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\musicListMore.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1022,
+      "sha256": "12ac9a5ed8046eb118e8b2d03a36c3d81d477aab8e494b50ca41eb014da0612f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\musicMore.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1225,
+      "sha256": "4f3b107bb25c6ea8b6e83f01dfd1188bca4217d1d20317496cfb6f48fcba34b6"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\musicOrderPlay.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1394,
+      "sha256": "d7c448e6e856572726adb67575bd2c8661a373a6f100c7b7dfffe0f57b1d6045"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\musicPlayAll.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1264,
+      "sha256": "64651ffe744c3b44cb109ac05021ebdf0c05b23db058843970581d21e8406e2a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\musicSortList.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2760,
+      "sha256": "923b853190d501073ce630b2b72f7dbebcecfed783ccc97c34c80c2f262baf56"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\music_music_list.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2090,
+      "sha256": "8381eb94a425dca2b95dce0f31b3add41f80954e76fa18011d975bb2afe40717"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\music_next.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1818,
+      "sha256": "931e9a2930d4c4f23cfe2c799814a59b28086714164a8810de3e8f74955a5c06"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\music_pause.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2326,
+      "sha256": "1fdf9a8f0fd7ac73f458d36271db502a271d121a607e09ac5a4f7e7f6d06fafc"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\music_play.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1273,
+      "sha256": "0fe7ef5186c64b9fdf0804628c537ddbc9540c9187fe78900baa59b4220098e1"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\music_previous.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1455,
+      "sha256": "77621f50b1159788834ace61e16fcccf3c549b021c01aad57babbf455a705662"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\pictureLoadFail.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11809,
+      "sha256": "6351502f84bc58803ecd88092c8ac0eb03df07f8103dc6abea084efec30c3ae7"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\startIcon.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 20093,
+      "sha256": "567c7c0c7a321ca180e010ad880f0f7519f6d351ac2b9665e2ee710e7cfe7778"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_chat_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 969,
+      "sha256": "9602a1f2e3c8e694f4c08b778b435585f1ea838c8e9acda0952daf3fe63751bc"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_chat_selected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2836,
+      "sha256": "711a0425b1e911e6ac9378e50d2e687751072f013b2dfb41b72541cba8fd98f0"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_function_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 16393,
+      "sha256": "d0c5d50103c1556ec0afdacb2a7a1c73beae3a6f996132c49c298b8d4b302791"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_function_selected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 16424,
+      "sha256": "f59c8784ceddf5ff013f656600a02ffb9200d7eb63efd1ca98f52022b0b57239"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_group_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12913,
+      "sha256": "91e44bb00d8cc9cffd33fba7ab26e3abc002991ae9e639b813f045b38502c743"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_group_select.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12977,
+      "sha256": "ec46134ff7cfb8fc0b3d563975a88da6d53817f0153acf95a0982f679eae2322"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_home_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3470,
+      "sha256": "0b03abef287884d65dd97a65b6dfe27b282fa9205f1ea950db246033f00a9a1a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_home_selected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3074,
+      "sha256": "3a87547fdf0e4a20125953efb410867c460152287a9b6bb88d0706a12a249d84"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_mine_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3725,
+      "sha256": "625cca4677f659137973163954908c7bfd0a8e4258127d0cd72542aec6f5d29b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\tab_mine_selected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3449,
+      "sha256": "68b36911d068b27b23f495484882d42cf8b65d412cd29cc52a46ea3aec019ed8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\uploadImage.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8738,
+      "sha256": "c40f8f249f1a0365955aa98ee4c05817b5d266dd6f1d839799c2b4a4356cd3d9"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\up_icon.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1445,
+      "sha256": "77c4552cd52f93983af7fd88829568a2b62a68f23176d0a9df5a2959259e942c"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\base\\media\\wristwatch_selected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11686,
+      "sha256": "9ea3a411cea4e6663e1979350893ad90f65a8ada4f8399e87e6bd69892a5b4b2"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ENFJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 239418,
+      "sha256": "630ed2381430c60c53578ad42579522ddebf2d444f2cc33de6e95d8d5063e55a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ENFP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 267792,
+      "sha256": "0742183b40f4be8291c10d88ccd23c3bac5c05d2e3997ec2d37ea4d0f42bb314"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ENTJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 272554,
+      "sha256": "b51e759b5880e4c875147b78d2eaa2a8793f65637109e370887d8a941f9f0687"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ENTP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 279252,
+      "sha256": "1f7b06b74393384babff4d12ae59ada692910a693887797507fe2271dd472c43"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ESFJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 286748,
+      "sha256": "d9c5be0526f95a42961c1069bc981196a0c6d9a6affa9d2614fd49add3662670"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ESFP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 268608,
+      "sha256": "fdb6f4edceb1692708a0f4eb4e4ea3cc8f3b7caebdebd201261f828dc238744f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ESTJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 322366,
+      "sha256": "752c5786bf1ef6fbe87627d4aa707d22592c1a2c1b9a7dd250965073985b403f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ESTP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 303662,
+      "sha256": "8e3302c91aa018b5be14df1790e849b2ae3cbd2b0d176234eb9717a12d887301"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\INFJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 263216,
+      "sha256": "cd8d22a8dd715dafed012f86b88c76970569e1d1a16688ae12666e589c81d6d8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\INFP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 272374,
+      "sha256": "3ecc04d6888da4db8398e00204141d7a8f1b3190d26a80b625d5f02685a6d26d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\INTJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 271312,
+      "sha256": "9680b1b8cb9e8c3d6b80b0afd86f897e70712dbf67e6576276aef2034514a42b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\INTP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 253204,
+      "sha256": "bc915aed5f9f4ae0562b0620d0cb5cd00000b8852d54586f4f17d132f15c964b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ISFJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 270846,
+      "sha256": "2fa54e97c4cab6e880c13763da579aee141ed21c2060ed90365b092adc88c72d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ISFP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 280998,
+      "sha256": "4a9066bce064f9dafd5d6226fbbb323f982ae825476e79749faad300cba709fa"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ISTJ.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 300334,
+      "sha256": "5fb4024e674959c2f762631696b5003f214c8e96cdb1ef8e7fc6fca3339d1718"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\characterImage\\ISTP.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 288080,
+      "sha256": "05bc90c01aaf631f84e9f3c312acc834f76b426cd56bd6d5209b588ea122dd7b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\album.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 6719,
+      "sha256": "c09ff768f0abfb3831b1c4c021ab7d7d742808e58a2da52210bd9a0e8fc7872d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\consultCenter.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15233,
+      "sha256": "465e7bdf248e6fe45f794859ecff57b4761db5b5eaeeff2119efa6d572261dc9"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_cancel.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4527,
+      "sha256": "ca8d169cd939026204be7941792aa21c3cf2ee451c228b7dc68ef37642f1c6bd"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_delete.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3113,
+      "sha256": "6306e2bd2b8ae1eeada47ac68469ecf7ef6f1654e113b2a7d2ec689e57e19e43"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_down.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2994,
+      "sha256": "5ea280a7a0905db2907c493f00556c32f2df88932df1074692f5404d12a7d40d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_edit.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4891,
+      "sha256": "f70074282f3583010b0cd691948a073d73c56d71c9f25dfea61bebfe706f395a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_save.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 6724,
+      "sha256": "16ce41b1b44556ceec0be30134a4dc77f3bae4e322467c1ddbb8df49a943b0e8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_search.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8385,
+      "sha256": "87c6c55b6f145db00d8907d084b397902de6fb82320d38df450bf70778bb6825"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\diary_up.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2906,
+      "sha256": "d1d162798468e51ca007a41a774361017effdbe51419e1d8501aff4aace063ad"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\game.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 18220,
+      "sha256": "803b695d77dd8bb641382b660a01eef442632fae3e4b5ec3759c03055f864647"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\img.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 550926,
+      "sha256": "ebd47be611810953ec9633427c5f5b32b984dae74699a8f6d6cb74be6e30c42c"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\knowledge_design_style.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 635,
+      "sha256": "1a84ff6ac164e0cf2eff4a522e933ef5533f8431e2e5a203e189c8d991435abc"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\knowledge_popular_science2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10894,
+      "sha256": "b687cf1d79d23cfb8416dbdac8a1e2b51489ccae602854076525978321a00795"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\knowledge_popular_science_ic.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12607,
+      "sha256": "d643d9520756568d49937f4bce36d7965f3927ca42b7f1fdb18bbc146a5b007c"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\musicAlbum.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1777829,
+      "sha256": "5f28c9053ab842ff1995a3061a0141c819a96e7ac137fab2d1566b452f4e8812"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_back_down.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2173,
+      "sha256": "b6044ab5af801bd2d1fe96d70f0dc2a5d5ecbc4969f9a70f4f0096504d978d5a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_collect.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1848,
+      "sha256": "57655636b4646188b244fe8ad7d5d942cc8c89fe90e8109f31e2a93595f7430b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_comments.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2279,
+      "sha256": "6ce00629479a0aaa9da833ccd96b85b910da8ea826018ac1d74bb7914a92a110"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_download.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1785,
+      "sha256": "6db533c9a926afd7b40a965d055dbba0e0c012e3ce590532c30c9703142b4334"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_dream.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 743113,
+      "sha256": "d659eef5fe628b1c9da17bdf8627ef6fbfe9439b5a86c0488b83fe34e4b1fbf9"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_lyrics_button.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2913,
+      "sha256": "7951c6c17c1515b39eeb0521db9977b96bcd20ffb4847dc2e0eb4c43deeb8649"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_music_share.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1989,
+      "sha256": "144c1bba0920e9bb965612a1242d753daafd5f1e06f5665cc18f3cf06f9ffa6b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture1.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 825951,
+      "sha256": "8be9b4df2b2a5769a5e6abcba9cde95fc64abdd2c30d68912444c9c9ed94a2bd"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture2.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1160826,
+      "sha256": "a3d146a95394fbc735489910c45585f2497d9710365ec7485004831705f45a4f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture3.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2683728,
+      "sha256": "c2b5f1d4c21feb0a8b1bb5acc16bb50f0c531a823a194439c5ba73e0862c50bd"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture4.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1253887,
+      "sha256": "1e7cf5cf32f5543c58f7b527dfce7863f8c608645a003b6ec7889c2862bc4fb5"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture5.jpg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 40491,
+      "sha256": "1a121c19cd202c5c62f88ee8d67ded56c59fa7f9ae0e79ce57bbfc048425444a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture6.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 720942,
+      "sha256": "604058f913298717cfd2bd746468b052894a0d4cf6ee73edef6afb6eab15bd5c"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture7.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 743116,
+      "sha256": "6984f903629455efd254d2e449909de7c92d440be88c234b0b93ff8b49980ba3"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_picture8.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 903637,
+      "sha256": "b79b2a8dcf4a3e119262880a5016dd7a3394c94434d27cc90be5dfe36445c3ef"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_forward.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1201,
+      "sha256": "aabf87d678cef37dc70937c392a2899f9b75441cee991394817ad33c32232f27"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_likes.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2993,
+      "sha256": "521909fafbe2b798dcf31c34dbef6dd7d5b327279075ced649ea04d6048f5eb4"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_list_cycled.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2655,
+      "sha256": "4be2f87e1d128eaa445ffbbe3a2d3a51c8fc682aa563e4fb56531cdd67053c2d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_next.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1101,
+      "sha256": "2cea48792faf2cc65532839103ac55cd7b3a5bd546966925c51c6b4f950383fb"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_pause.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1284,
+      "sha256": "cf31a78cee3f87b06935d1bf647af8a6c73a2d8d89758e7565405c63c23c8f5b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_public_play.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1194,
+      "sha256": "d73139c45e895cca1f505c4c82900242ace8490cc63f22fa03926a0824f1ff7a"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_ring.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2843,
+      "sha256": "c47b5dbf37c004939dc91fdd970290ce752a5941207c00eeca7bd15a3867c223"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_sequence.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2861,
+      "sha256": "732d94503b1c3f133b831b736cdfe453829b10ae5e8b089ae3dfae9920450b4d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_share.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2011,
+      "sha256": "a7bd15f2ae8b9b6f55518dd8f68f36184bb7fea954e50e10ac4b4196eb06fdb5"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_sq.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5590,
+      "sha256": "1ab7976482da95debb5c9c2604105dfd3fadee19886f2ae7301e814eeebcff08"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\music_vip.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3314,
+      "sha256": "a075d269c116ea1855ddd00329b25180bb272c14ed3b081dd498ea71d1fcf326"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\functionImage\\space.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13859,
+      "sha256": "8173d407cb75c9e327b7fd974c1c2332df9b63468bb07892e727ec56174ac7be"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\bluetoothConnected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10266,
+      "sha256": "84da35fe158085a77c33aad7190734978ba70728c86970b9433b6cd1a0e0a069"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\bluetoothUnconnected.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9643,
+      "sha256": "34d50a903cabb16004951c4582995992bda813d2dfa537d6351f2f8ace201ba7"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\bmi.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1426,
+      "sha256": "c9115c3bf6f56707c291e6794765c216eb9b3d1aa7ac81b1460a1b83201d19df"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\body_fat_scale.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1113,
+      "sha256": "7f88dc0f07b6f480422ed5cdf671923025232aa89fb85b9f568be1f43afdd7e8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\body_temperature.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 4058,
+      "sha256": "d90067d043aedcb311eb99853a3b1913374e95d849e0161ee40fa41facce60b1"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\calendar.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3446,
+      "sha256": "cc7036d4298251d748ee0666335d413856bcd5415b40e2e472c2903b270eba17"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\distance.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2020,
+      "sha256": "e5ddd3976ef0f2b4766e1ba0ae7c20262005c7e1956901d2f421c992d83441fb"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\heart_rate.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3032,
+      "sha256": "d5e2bb2f929a958dac4ee39debb7152139d659270f60cc58438421cb142a481f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\height.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1646,
+      "sha256": "68f272c010ce814f36a742c03c58b7c1e1266b033209ad154279d00ce9fa67d3"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\programs.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 12235,
+      "sha256": "5cba57994802e3f42e09a192f894f4aa1d6c6ba9f6b1a14a513141742105c3d0"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\sedentary_time.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5802,
+      "sha256": "0d6344ba0dc5a12189c4c82554c74549690f4886b7f35520bd0e0b3a5420db2f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\sleep_time.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3341,
+      "sha256": "03f1a8baddd7889d4da6c918d53d52b2c8c874fd3dae8cf6394b980a9c1339f8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\start.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11260,
+      "sha256": "9aacfb24a503120465821e4a8449e743ce67d5fe392d0d84951b3e24dfc3ae78"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\time.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 3959,
+      "sha256": "155138b9b666a1d49cff395847117b64f09ce1ef0f5a7099cf2c709e6fc24161"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\treadmill.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 1052,
+      "sha256": "a7a6b9a6824b503c008041707128e70c6f236d14e23c8a8b9ab768d6d0b350af"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\unStart.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11067,
+      "sha256": "7b52d609718aa62c306209b783bf4565ffa1d16b57fdc0ed52b7666375cbbf79"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\weight.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 13104,
+      "sha256": "f67a96337a65f6994aa4ec2ebb7adb76b0c499a91aac645935a0621ffb54f9eb"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\weight.svg",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 2222,
+      "sha256": "bd51ca32026a81f268c7ed6626fcd472eeb08f151da4d825b57f8a576eabbe7f"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\iotImage\\wristwatch_normal.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 8402,
+      "sha256": "683c5728311bc774480f2437be55def03d6e5df39080132d2741554f12e2d9b3"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\agreement.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 16247,
+      "sha256": "39ffef745b72c32976af0e238865a82f2f82d812b54064683f0446ac9034b32c"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\collect.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15889,
+      "sha256": "d3ccb3afaedd47595338d1c52cf6077d2b40e77576de7cc0b4dcf184269f9feb"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\feed_back.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 24176,
+      "sha256": "644f82776b2c88d2df8a756dc3d81fe6ffbbb105f6025a21ac6122e4dc29a590"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\forum.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 15705,
+      "sha256": "f38ad3040a2272aac109a0ecb4ab40fe63fb3fa5fd0078c93ac17d6e3b38e9e2"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\future.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10164,
+      "sha256": "02162d7aa154cb28c3710c28a4e75826eb37f6d917955829834123b4628ba09b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\history.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 14075,
+      "sha256": "204fba9a4985de219218d9741069eb966206bcd82acb417b999b710c2ab60872"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\information.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 5798,
+      "sha256": "95f41a7661fde42ae09d32e9c19958b107f6e220b567a071f5290ac1cc37135d"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\interest.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11515,
+      "sha256": "d3f4101ad402935f86ef26e6b4dfbbe820929c6f12b29acc5dae0060c02fc8c8"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\kiss.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 18757,
+      "sha256": "b8a6628dc1a750718c33f11baa54c9180d0a99d21c0f6da797c8a8135b874639"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\motion-history.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11926,
+      "sha256": "afad9fd0213df209c26212a6cb784ff491c87a86b5dd4e2a6364cf097f36b3ce"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\my_customer_service.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 19244,
+      "sha256": "82f1e011c8d71fe1457c199c53bfd3db02c28dbd2012a280cef0ae6aaa98c544"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\personal-data.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9686,
+      "sha256": "84ddd3fa8e1cfc58f2eaff803b78e444eb20b8f607c3df5e30ac4f191b93ea5b"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\quit.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10517,
+      "sha256": "2fd84389a7b236c2b2908687dffa1374b3b03fae3c8e5e5bd514a96f406f5ec2"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\right_about.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10512,
+      "sha256": "359459aab8dd0e9cfe87bf0fa21322949ab4edf6c53dfee8be24568e446ffed9"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\right_agreement.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 10043,
+      "sha256": "c12c6b5adfe4ca1e0643e4cc604490e118b44803685078a6e28d7c43968e1a80"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\right_feed_back.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 11725,
+      "sha256": "0b926a8f1fbe46b9864ee0486ccbfe8e85a3598180c307fc47c5a7b5d5ef17a6"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\right_planning.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 21306,
+      "sha256": "86ef2786fb1addc4fab84effada6180043bba5582d8ef07444aa62b8f2b487fe"
+    },
+    {
+      "path": "harmony\\entry\\src\\main\\resources\\rawfile\\my\\setting.png",
+      "action": "restore-reviewed-original-asset",
+      "bytes": 9698,
+      "sha256": "694234b4ec642c8252b2f3686d89a9f9aafa00d9f09ce737dcc0cffaaf0ddd53"
+    },
+    {
+      "path": "mobile/components/digital-human-component.vue",
+      "action": "restore-latest-feature-page",
+      "bytes": 1560,
+      "sha256": "6b14fb8d03329ca8405b63daf2203071da0cc5216b4602cae96cbde3d0a503dd"
+    },
+    {
+      "path": "mobile/function_pages/views/digital-human/digital-human-index.vue",
+      "action": "restore-latest-feature-page",
+      "bytes": 1552,
+      "sha256": "955a58fb04ce4aa1cdc2ec7e1e02afb0cff7317cb02ea16aa9c8315cbbefc643"
+    },
+    {
+      "path": "mobile/function_pages/views/virtual-exhibition/virtual-exhibition-index.vue",
+      "action": "restore-latest-feature-page",
+      "bytes": 8094,
+      "sha256": "0b910537d76ef424c592965fc5af52be3d98116c50bf7ac88c96c13b4e170fb1"
+    },
+    {
+      "path": "mobile/function_pages/views/virtual-exhibition/webview.vue",
+      "action": "restore-latest-feature-page",
+      "bytes": 2917,
+      "sha256": "8d26aea24a91e63ef711ba8cf3e547c7218181e6016e29a4495e3aa1d732c1a8"
+    },
+    {
+      "path": "mobile/mine_pages/appointment.vue",
+      "action": "restore-latest-feature-page",
+      "bytes": 13963,
+      "sha256": "360afbc53e7f54bbdd048f32589cc56f6120497864a86da8469f1d17f8338ce9"
+    }
+  ]
+}
