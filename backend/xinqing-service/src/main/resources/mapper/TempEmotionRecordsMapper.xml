@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.TempEmotionRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="com.hpu.xinqingpojo.entity.TempEmotionRecords">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="detectionTime" column="detection_time" jdbcType="TIMESTAMP"/>
+            <result property="emotionType" column="emotion_type" jdbcType="VARCHAR"/>
+            <result property="confidence" column="confidence" jdbcType="DECIMAL"/>
+            <result property="featureBlogId" column="feature_blog_id" jdbcType="BIGINT"/>
+            <result property="featureActiveId" column="feature_active_id" jdbcType="BIGINT"/>
+            <result property="relatedContent" column="related_content" jdbcType="VARCHAR"/>
+            <result property="isAbnormal" column="is_abnormal" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,detection_time,
+        emotion_type,confidence,feature_blog_id,
+        feature_active_id,related_content,is_abnormal
+    </sql>
+</mapper>

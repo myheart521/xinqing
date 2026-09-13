@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "mainPage_baseTab_size",
+      "value": "25"
+    },
+    {
+      "name": "mainPage_baseTab_top",
+      "value": "4"
+    },
+    {
+      "name": "mainPage_barHeight",
+      "value": "56"
+    }
+  ]
+}

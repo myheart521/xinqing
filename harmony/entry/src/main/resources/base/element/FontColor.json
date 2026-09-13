@@ -1,0 +1,20 @@
+{
+  "color": [
+    {
+      "name": "gray",
+      "value": "#aaaaaa"
+    },
+    {
+      "name": "orangered_text",
+      "value": "#ff7043"
+    },
+    {
+      "name": "album_name_introduction",
+      "value": "#556b89"
+    },
+    {
+      "name": "purple_gray",
+      "value": "#556B89"
+    }
+  ]
+}

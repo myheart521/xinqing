@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.RunningMapper">
+
+    <select id="selectCountByDate" resultType="com.hpu.xinqingpojo.DTO.RunningReportDTO"
+            parameterType="java.util.Map">
+        select
+        DATE (create_time) as create_time,
+        ROUND(sum(long_time),2) as long_time,
+        ROUND(sum(diatance),2) as  distance
+        from running
+        <where>
+            <if test="beginTime!=null">
+                and create_time &gt; #{beginTime}
+            </if>
+            <if test="endTime!=null">
+                and create_time &lt; #{endTime}
+            </if>
+            <if test="userId!=null">
+                and user_id = #{userId}
+            </if>
+        </where>
+        GROUP BY
+        DATE(create_time)
+        ORDER BY
+        DATE(create_time);
+    </select>
+</mapper>

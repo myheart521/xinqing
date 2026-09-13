@@ -1,0 +1,24 @@
+{
+  "float": [
+    {
+      "name": "mp_xs",
+      "value": "5"
+    },
+    {
+      "name": "mp_sm",
+      "value": "10"
+    },
+    {
+      "name": "mp",
+      "value": "15"
+    },
+    {
+      "name": "mp_lg",
+      "value": "20"
+    },
+    {
+      "name":"mp_xl",
+      "value": "25"
+    }
+  ]
+}

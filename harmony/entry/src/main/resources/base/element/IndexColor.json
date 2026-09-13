@@ -1,0 +1,12 @@
+{
+  "color": [
+    {
+      "name": "mainPage_selected",
+      "value": "#1698CE"
+    },
+    {
+      "name": "mainPage_normal",
+      "value": "#6B6B6B"
+    }
+  ]
+}

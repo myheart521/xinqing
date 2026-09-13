@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.ChatMapper">
+    <select id="selectTopTeachersWithChatCounts" resultType="com.hpu.xinqingpojo.VO.DataVo">
+        SELECT
+            u.user_name AS name,
+            COUNT(*) AS value
+        FROM (
+                 SELECT c.user_sender_id AS teacher_id
+                 FROM chat c
+                          JOIN user sender ON c.user_sender_id = sender.id AND sender.role_id = 2
+                          JOIN user receiver ON c.user_receiver_id = receiver.id AND receiver.role_id = 3
+
+                 UNION ALL
+
+                 SELECT c.user_receiver_id AS teacher_id
+                 FROM chat c
+                          JOIN user sender ON c.user_sender_id = sender.id AND sender.role_id = 3
+                          JOIN user receiver ON c.user_receiver_id = receiver.id AND receiver.role_id = 2
+             ) AS comm
+                 JOIN user u ON comm.teacher_id = u.id
+        GROUP BY comm.teacher_id
+        ORDER BY value DESC
+        LIMIT 5
+    </select>
+    <select id="selectConsultCount" resultType="java.lang.Integer">
+        SELECT COUNT(DISTINCT user_id) AS chat_user_count
+        FROM (
+
+                 SELECT user_sender_id AS user_id
+                 FROM chat
+                 WHERE DATE(create_time) = #{date}
+
+                 UNION
+
+
+                 SELECT user_receiver_id AS user_id
+                 FROM chat
+                 WHERE DATE(create_time) = #{date}
+             ) AS all_users
+    </select>
+</mapper>

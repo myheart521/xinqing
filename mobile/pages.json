@@ -1,0 +1,398 @@
+{
+	"easycom": {
+		"custom": {
+			"^tn-(.*)-(item|group)$": "@tuniao/tnui-vue3-uniapp/components/$1/src/$1-$2.vue",
+			"^tn-(.*)": "@tuniao/tnui-vue3-uniapp/components/$1/src/$1.vue"
+		}
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/index/text",
+			"style": {
+				"navigationBarTitleText": "测试页面"
+			}
+		},
+		{
+			"path": "pages/index/components/group",
+			"style": {
+				"navigationBarTitleText": "圈子页面"
+			}
+		},
+		{
+			"path": "pages/index/components/introduction",
+			"style": {
+				"navigationBarTitleText": "心理咨询中心页面"
+			}
+		},
+		{
+			"path": "pages/index/components/views/introduction/introduction-detail",
+			"style": {
+				"navigationBarTitleText": "心理咨询中心页面"
+			}
+		},
+		{
+			"path": "pages/index/components/function",
+			"style": {
+				"navigationBarTitleText": "功能页面"
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "mine_pages",
+			"pages": [{
+					"path": "about-me",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "use-protocol",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "future-plan",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "question-feedback",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "login"
+				},
+				{
+					"path": "user-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "messages",
+					"style": {
+						"navigationBarTitleText": "论坛消息"
+					}
+				},
+				{
+					"path": "messagelist/messagelist",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "teacher-message",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "teacher-message-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "change-name-password",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "change-avatar",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "personal-center",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "test-history",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "test-data-report",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "test-data-report-result",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "motion-exercise-history",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "my-like",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "my-active",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "my-collection",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "version",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "help",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "content",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}
+			]
+		},
+		{
+			"root": "function_pages",
+			"pages": [{
+					"path": "views/analyse-index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/note-page",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+
+				{
+					"path": "views/add-note",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/sleep-aid",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/music-list",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-exercise",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-exercise-video",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-index-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-eating",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-eating-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/motion-wiki",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/test-list",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/test-question",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/test-result",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/games/game-index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/games/wu-zi-qi/index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/games/tan-chi-she/index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/games/bird/index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/games/beast/index",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}
+			]
+		},
+		{
+			"root": "group_pages",
+			"pages": [{
+					"path": "views/all-circle",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/circle-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/search-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/group-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/blogger-other",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/hot-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/active-detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/add-group",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/add-active",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/all-tag",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "views/my-others-circle",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "color": [
+    {
+      "name": "music_bg",
+      "value": "#F6F9FC"
+    },
+    {
+      "name": "album_bg",
+      "value": "#E4ECF7"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hpu.xinqing.mapper.IntroductionMapper">
+
+    <select id="findPCCs" resultType="com.hpu.xinqingpojo.entity.PsychologicalCounselingCenter">
+
+select * from psychological_counseling_center
+        <where>
+            <if test="school != null">
+                and school like concat('%',#{school},'%')
+            </if>
+            <if test="province != null">
+                and province = #{province}
+            </if>
+        </where>
+    </select>
+</mapper>

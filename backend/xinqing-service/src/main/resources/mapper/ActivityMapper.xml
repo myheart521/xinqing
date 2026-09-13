@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.ActivityMapper">
+
+    <select id="selectOrderByHot" resultType="com.hpu.xinqingpojo.VO.ActivityAllVO">
+        SELECT
+            id,
+            view_user_count,
+            follow,
+            title,
+            images,
+            tag,
+            color,
+            user_id,
+            (#{view} * view_user_count + #{follow} * follow) / (1 + #{timeK} *((UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(create_time))/86400)) AS heat_count
+        FROM
+            activity
+        ORDER BY
+            heat_count DESC
+    </select>
+</mapper>

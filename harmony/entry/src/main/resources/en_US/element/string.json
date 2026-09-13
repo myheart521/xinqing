@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "XinQing"
+    },
+    {
+      "name": "login",
+      "value": "Please login"
+    },
+    {
+      "name": "login_desc",
+      "value": "May you be your own sun, without the help of anyone's light"
+    },
+    {
+      "name": "account",
+      "value": "account"
+    },
+    {
+      "name": "password",
+      "value": "password"
+    },
+    {
+      "name": "sign_up",
+      "value": "Sing up"
+    },
+    {
+      "name": "forgot_password",
+      "value": "Forgot password"
+    },
+    {
+      "name": "home_title",
+      "value": "Home"
+    },
+    {
+      "name": "function",
+      "value": "Function"
+    },
+    {
+      "name": "group",
+      "value": "Forum"
+    },
+    {
+      "name": "mine",
+      "value": "Mine"
+    },
+    {
+      "name": "chat",
+      "value": "AI"
+    },
+    {
+      "name": "add_device",
+      "value": "Add new device"
+    },
+    {
+      "name": "play_list",
+      "value": "Play list"
+    },
+    {
+      "name": "list_name",
+      "value": "Healing music"
+    },
+    {
+      "name": "playlist_Introduction",
+      "value": "Selected pleasant and soothing music"
+    },
+    {
+      "name": "collect",
+      "value": "collect"
+    },
+    {
+      "name": "downLoad",
+      "value": "Down load"
+    },
+    {
+      "name": "comment",
+      "value": "Comment"
+    },
+    {
+      "name": "share",
+      "value": "Share"
+    },
+    {
+      "name": "play_all",
+      "value": "Play all"
+    },
+    {
+      "name": "forget_past",
+      "value": "Forget about your past self"
+    },
+    {
+      "name": "reason_background",
+      "value": "keep background running"
+    }
+  ]
+}

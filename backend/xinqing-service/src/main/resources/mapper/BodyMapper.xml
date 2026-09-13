@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.BodyMapper">
+
+    <select id="avgBody" resultType="com.hpu.xinqingpojo.DTO.BodyReportDTO" parameterType="java.util.Map">
+                SELECT
+                DATE (create_time) as create_time,
+                ROUND(AVG(height), 2) AS height,
+                ROUND(AVG(weight), 2) AS weight,
+                ROUND(AVG(BMI), 2) AS BMI,
+                ROUND(AVG(ti_zhi_lv), 2) AS ti_zhi_lv
+                FROM
+                body
+                <where>
+                    <if test="beginTime!=null">
+                        AND create_time > #{beginTime}
+                    </if>
+                    <if test="endTime!=null">
+                        AND create_time &lt; #{endTime}
+                    </if>
+                    <if test="equipId!=null">
+                        AND equip_id = #{equipId}
+                    </if>
+                </where>
+                GROUP BY
+                DATE(create_time)
+                ORDER BY
+                DATE(create_time);
+
+       <!-- SELECT DATE(create_time) AS create_time, ROUND(CAST(AVG(height) AS NUMERIC), 2) AS height,
+        ROUND(CAST(AVG(weight) AS NUMERIC), 2) AS weight,
+        ROUND(CAST(AVG(BMI) AS NUMERIC), 2) AS BMI, ROUND(CAST(AVG(ti_zhi_lv) AS NUMERIC), 2) AS ti_zhi_lv
+        FROM xinqingapp.body
+        <where>
+            <if test="beginTime!=null">
+                AND create_time > #{beginTime}
+            </if>
+            <if test="endTime!=null">
+                AND create_time &lt; #{endTime}
+            </if>
+            <if test="equipId!=null">
+                AND equip_id = #{equipId}
+            </if>
+        </where>
+        GROUP BY
+        DATE(create_time)
+        ORDER BY
+        DATE(create_time);-->
+    </select>
+</mapper>

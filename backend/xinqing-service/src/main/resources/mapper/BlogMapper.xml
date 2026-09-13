@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.BlogMapper">
+
+    <select id="selectMessage" resultType="com.hpu.xinqingpojo.VO.BlogMessageVO"
+            parameterType="java.lang.Long">
+        select sum(liked) as like_count ,
+               count(*) as hot_reviews_count
+        from blog
+        where user_id=#{userId}
+    </select>
+    <select id="getPostData" resultType="com.hpu.xinqingpojo.VO.DataVo">
+        SELECT
+            u.user_name AS name,
+            COUNT(b.id) AS value
+        FROM blog b
+                 JOIN user u ON b.user_id = u.id
+        GROUP BY b.user_id
+        ORDER BY value DESC
+        LIMIT 5
+    </select>
+</mapper>

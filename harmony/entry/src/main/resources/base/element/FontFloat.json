@@ -1,0 +1,32 @@
+{
+  "float": [
+    {
+      "name": "xs",
+      "value": "12"
+    },
+    {
+      "name": "sm",
+      "value": "13"
+    },
+    {
+      "name": "lg",
+      "value": "16"
+    },
+    {
+      "name": "xl",
+      "value": "18"
+    },
+    {
+      "name": "2xl",
+      "value": "20"
+    },
+    {
+      "name": "3xl",
+      "value": "26"
+    },
+    {
+      "name": "4xl",
+      "value": "32"
+    }
+  ]
+}

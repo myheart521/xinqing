@@ -1,0 +1,139 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/xinqing?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      max-lifetime: 290000
+      connection-test-query: SELECT 1
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: 6379
+      password: ${SPRING_DATA_REDIS_PASSWORD}
+      database: 0
+      lettuce:
+        pool:
+          min-idle: 0
+          max-idle: 8
+          max-wait: -1ms
+          max-active: 16
+  ai:
+    openai:
+      api-key: ${SPRING_AI_OPENAI_API_KEY}
+      base-url: ${SPRING_AI_OPENAI_BASE_URL:http://localhost:11434/v1}
+      chat:
+        options:
+          model: ${SPRING_AI_OPENAI_MODEL:qwen2.5:3b}
+  rabbitmq:
+    host: ${SPRING_RABBITMQ_HOST:localhost}
+    port: 5672
+    username: ${SPRING_RABBITMQ_USERNAME}
+    password: ${SPRING_RABBITMQ_PASSWORD}
+    virtual-host: /
+    connection-timeout: 10000
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+sa-token:
+  token-name: token
+  timeout: 2592000
+  active-timeout: -1
+  is-concurrent: false
+  token-style: uuid
+  jwt-secret-key: ${SA_TOKEN_JWT_SECRET_KEY}
+  isReadCookie: false
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: info
+mybatis-plus:
+  type-aliases-package: com.hpu.xinqingpojo.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+  global-config:
+    db-config:
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+      update-strategy: not_null
+xinqing:
+  alioss:
+    endpoint: ${XINQING_ALIOSS_ENDPOINT}
+    access-key-id: ${XINQING_ALIOSS_ACCESS_KEY_ID}
+    access-key-secret: ${XINQING_ALIOSS_ACCESS_KEY_SECRET}
+    bucket-name: ${XINQING_ALIOSS_BUCKET_NAME}
+  wechat:
+    appid: ${XINQING_WECHAT_APPID}
+    secret: ${XINQING_WECHAT_SECRET}
+  huawei:
+    iot:
+      token-url: ${XINQING_HUAWEI_IOT_TOKEN_URL}
+      username: ${XINQING_HUAWEI_IOT_USERNAME}
+      password: ${XINQING_HUAWEI_IOT_PASSWORD}
+      IAM-account: ${XINQING_HUAWEI_IOT_IAM_ACCOUNT}
+      endpoint: ${XINQING_HUAWEI_IOT_ENDPOINT}
+      project-id: ${XINQING_HUAWEI_IOT_PROJECT_ID}
+      device-id: ${XINQING_HUAWEI_IOT_DEVICE_ID}
+search:
+  api-key: ${SEARCH_API_KEY}
+langchain4j:
+  community:
+    dashscope:
+      streaming-chat-model:
+        api-key: ${LANGCHAIN4J_COMMUNITY_DASHSCOPE_STREAMING_CHAT_MODEL_API_KEY}
+        model-name: qwen-max-2025-01-25
+        enable-search: true
+        logRequests: false
+        logResponse: false
+      chat-model:
+        api-key: ${LANGCHAIN4J_COMMUNITY_DASHSCOPE_CHAT_MODEL_API_KEY}
+        model-name: qwen-max
+        enable-search: true
+      embedding-model:
+        api-key: ${LANGCHAIN4J_COMMUNITY_DASHSCOPE_EMBEDDING_MODEL_API_KEY}
+        model-name: text-embedding-v3
+algorithm:
+  hotArticle:
+    name: default
+    wants: 5
+sse:
+  chunk:
+    size: 8192
+mcp:
+  os:
+    type: linus
+  base:
+    command:
+      windows: cmd /c npx -y
+      linux: npx -y
+  fetch:
+    command: mcp-server-fetch
+baidu:
+  map:
+    api:
+      key: ${BAIDU_MAP_API_KEY}
+mysql:
+  host: ${MYSQL_HOST:localhost}
+  port: 3306
+  user: ${MYSQL_USER}
+  password: ${MYSQL_PASSWORD}
+  database: ${MYSQL_DATABASE:xinqing}
+timeTask:
+  warning:
+    fixedDelay: 86400000000
+    handler:
+      exception: default
+      task: qihe
+      notify: default
+  tmp-warning:
+    fixed-delay: 8640000000

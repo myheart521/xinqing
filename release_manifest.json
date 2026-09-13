@@ -1,0 +1,37 @@
+{
+  "version": "synthetic-114900-v1",
+  "artifact": "psych-health-synthetic-114900.jsonl.gz",
+  "compressed_bytes": 6425722,
+  "compressed_sha256": "83c4c572c866eeb106c9874e134e3ee8a4e8ffbc92abd20601f8738af3c066bf",
+  "uncompressed_bytes": 59016611,
+  "uncompressed_sha256": "34636fac3d2240ddd5fca8494cc1831fc44dc2212d36fbf7621eaed47b2d322c",
+  "rows": 114900,
+  "counts": {
+    "campus": 48100,
+    "crisis": 27500,
+    "tools": 29500,
+    "faq": 9800
+  },
+  "license": "CC-BY-4.0",
+  "generator": {
+    "file": "scripts/generate_synthetic_dataset.py",
+    "sha256": "ccab5391bbe7f9ac15535ec0e1449e6d1c4ec91efadfecc2ecff8cc658c3d515",
+    "seed": 20260511
+  },
+  "validation": {
+    "historical_subset_byte_match": true,
+    "json_schema_passed": true,
+    "tool_json_syntax_passed": true,
+    "identifier_pattern_hits": {
+      "phone": 0,
+      "email": 0,
+      "ipv4": 0,
+      "chat_identifier": 0,
+      "private_path": 0,
+      "url": 0
+    },
+    "clinical_validation_performed": false,
+    "tool_semantic_alignment_verified": false
+  },
+  "historical_model_weights_included": false
+}

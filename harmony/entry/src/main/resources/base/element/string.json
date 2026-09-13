@@ -1,0 +1,104 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "心晴"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "login_desc",
+      "value": "愿你成为自己的太阳，无需借助谁的光"
+    },
+    {
+      "name": "account",
+      "value": "账号"
+    },
+    {
+      "name": "password",
+      "value": "密码"
+    },
+    {
+      "name": "sign_up",
+      "value": "注册"
+    },
+    {
+      "name": "forgot_password",
+      "value": "忘记密码"
+    },
+    {
+      "name": "home_title",
+      "value": "首页"
+    },
+    {
+      "name": "function",
+      "value": "功能"
+    },
+    {
+      "name": "group",
+      "value": "论坛"
+    },
+    {
+      "name": "mine",
+      "value": "我的"
+    },
+    {
+      "name": "chat",
+      "value": "AI陪聊"
+    },
+    {
+      "name": "add_device",
+      "value": "添加设备"
+    },
+    {
+      "name": "play_list",
+      "value": "歌单"
+    },
+    {
+      "name": "list_name",
+      "value": "具备疗愈的音乐"
+    },
+    {
+      "name": "playlist_Introduction",
+      "value": "精选动听舒缓心晴的音乐"
+    },
+    {
+      "name": "collect",
+      "value": "收藏"
+    },
+    {
+      "name": "downLoad",
+      "value": "下载"
+    },
+    {
+      "name": "comment",
+      "value": "评论"
+    },
+    {
+      "name": "share",
+      "value": "分享"
+    },
+    {
+      "name": "play_all",
+      "value": "播放全部"
+    },
+    {
+      "name": "forget_past",
+      "value": "忘掉过去的自己"
+    },
+    {
+      "name": "reason_background",
+      "value": "keep background running"
+    }
+  ]
+}

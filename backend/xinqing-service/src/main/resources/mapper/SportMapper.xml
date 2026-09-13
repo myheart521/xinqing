@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.SportMapper">
+
+
+    <select id="select" resultType="com.hpu.xinqingpojo.VO.SportVO">
+        select sport.id,time,image, title,motion,l.k league,l.text leagueDescribe
+            from sport left join league l on l.id = sport.league_id
+        <where>
+            <if test="title!=null and title!=''"> title like concat('%',#{title},'%') </if>
+            <if test="leagueId!=null"> and league_id=#{leagueId}</if>
+            <if test="startTime!=null and endTime!=null">and time between #{startTime} and #{endTime}</if>
+        </where>
+        order by time
+    </select>
+    <select id="selectById" resultType="com.hpu.xinqingpojo.VO.SportVideoVO">
+        select sport.id,sport.text,video,time,title,cal,motion,l.k league,l.text leagueDescribe
+        from sport left join league l on l.id = sport.league_id
+        where sport.id=#{id}
+    </select>
+
+    <select id="selectSportById" resultType="com.hpu.xinqingpojo.entity.Sport">
+        select * from sport
+        where sport.id=#{id}
+    </select>
+</mapper>

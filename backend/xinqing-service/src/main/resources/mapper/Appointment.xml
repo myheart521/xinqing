@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpu.xinqing.mapper.AppointmentMapper">
+
+    <resultMap id="TeacherAppointmentPageVoMap" type="com.hpu.xinqingpojo.VO.TeacherAppointmentPageVo">
+        <!-- 学生信息 -->
+        <result property="userName" column="user_name"/>
+        <result property="studentNumber" column="student_number"/>
+        <result property="userAvatar" column="user_avatar"/>
+        <result property="phone" column="phone"/>
+        <result property="sex" column="sex"/>
+        <result property="college" column="college"/>
+        <result property="majorClass" column="major_class"/>
+
+        <!-- 预约信息 -->
+        <result property="date" column="date"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="status" column="status"/>
+        <result property="excuse" column="excuse"/>
+    </resultMap>
+
+    <select id="selectTeacherAppointments" resultMap="TeacherAppointmentPageVoMap">
+        SELECT
+        u.user_name,
+        u.student_number,
+        u.user_avatar,
+        u.phone,
+        u.sex,
+        u.college,
+        u.major_class,
+        a.date,
+        a.start_time,
+        a.end_time,
+        a.id,
+        CASE a.status
+        WHEN 0 THEN '未处理'
+        WHEN 1 THEN '已通过'
+        WHEN 2 THEN '已驳回'
+        WHEN 3 THEN '已取消'
+        ELSE '未知状态'
+        END AS status,
+        a.excuse
+        FROM appointment a
+        LEFT JOIN user u ON a.student_id = u.id
+        WHERE a.teacher_id = #{teacherId}
+        <if test="name != null and name != ''">
+            AND u.user_name LIKE CONCAT('%', #{name}, '%')
+        </if>
+        ORDER BY a.create_time DESC
+    </select>
+    <resultMap id="StudentAppointmentPageVoMap" type="com.hpu.xinqingpojo.VO.StudentAppointmentPageVo">
+        <!-- 学生信息 -->
+        <result property="studentNumber" column="student_number"/>
+        <result property="studentName" column="student_name"/>
+
+        <!-- 预约信息 -->
+        <result property="date" column="date"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="status" column="status"/>
+        <result property="excuse" column="excuse"/>
+        <!-- 教师信息 -->
+        <result property="teacherName" column="teacher_name"/>
+    </resultMap>
+
+    <select id="selectStudentAppointments" resultMap="StudentAppointmentPageVoMap">
+        SELECT
+            s.student_number,
+            s.user_name AS student_name,
+            a.date,
+            a.start_time,
+            a.end_time,
+            CASE a.status
+                WHEN 0 THEN '未处理'
+                WHEN 1 THEN '已通过'
+                WHEN 2 THEN '已驳回'
+                WHEN 3 THEN '已取消'
+                ELSE '未知状态'
+                END AS status,
+            a.excuse,
+            t.user_name AS teacher_name
+        FROM appointment a
+                 INNER JOIN user s ON a.student_id = s.id
+                 INNER JOIN user t ON a.teacher_id = t.id
+        WHERE a.student_id = #{studentId}
+        ORDER BY a.create_time DESC
+    </select>
+</mapper>

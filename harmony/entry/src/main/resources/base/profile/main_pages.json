@@ -1,0 +1,26 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/login/LoginPage",
+    "pages/function/music/MusicPage",
+    "pages/TextPage",
+    "pages/function/diary/MyMemo",
+    "pages/function/motion/Motion",
+    "pages/function/motion/InMotion",
+    "pages/function/pcc/PCCIntroduction",
+    "pages/function/pcc/ShowPCC",
+    "pages/function/test/Testing",
+    "pages/function/test/TestQuestion",
+    "pages/function/test/basic/AdaptiveShowResult",
+    "pages/function/test/basic/AdaptiveTest",
+    "pages/function/test/basic/CharacterShowResult",
+    "pages/function/test/basic/CharacterTest",
+    "pages/function/test/TestingShowRes",
+    "pages/function/knowledge/IntroductionPage",
+    "pages/function/knowledge/KnowledgeIndex",
+    "pages/function/knowledge/KnowledgePopular",
+    "pages/login/Register",
+    "pages/index/MyDate",
+    "pages/group/InDiscuss"
+  ]
+}
